@@ -1,0 +1,72 @@
+/* Styles for the entire document */
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    background-color: #fffbf1;
+    font-family: 'Roboto';
+}
+
+.text4 {
+    font-weight: 300;
+    font-size: 12.1vw;
+}
+
+.text3 {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.color1 {
+    background-color: #fff1cd;
+}
+
+/* Cursor */
+
+#myCursor {
+    width: 1vw;
+    height: 1vw;
+    background-color: #003049;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Navbar */
+#profileImage {
+    width: 15vw;
+    -webkit-mask-image: url(materials/google_shape.svg);
+    mask-image: url(materials/google_shape.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+#inside {
+    z-index:3;
+}
+
+#profileImage img {
+    width: 15vw;
+    height: 15vw;
+}
+
+#myName {
+    left: 1vw;
+}
+
+#contacts {
+    right: 1vw;
+}
+
+.navbarItem {
+    position: absolute;
+    padding: 1vw 1.5vw;
+    top: 1.2vw;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
