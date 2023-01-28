@@ -6,11 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Federico Lucifora</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
   <link rel="stylesheet" href="style.css">
   <script src="addons/p5.js"></script>
   <script src="addons/p5.sound.js"></script>
@@ -18,14 +16,22 @@
 </head>
 
 <body>
-  
-  <div id="profileImage">
-    <div id="inside">
+
+  <div id="navbar">
+    <div id="myName">Federico Lucifora</div>
+    <div id="about" class="navbarItem"><div class="underline bcolor3_2"></div><div class="textNavbar">about</div></div>
+    <div id="work" class="navbarItem"><div class="underline bcolor2_2"></div><div class="textNavbar">work</div></div>
+    <div id="contacts" class="navbarItem"><div class="underline bcolor4_2"></div><div class="textNavbar">contacts</div></div>
   </div>
-</div>
-  <button id="myName" class="text3 navbarItem">Federico Lucifora</button>
-  <button id="contacts" class="text3 navbarItem">contacts</button>
-  <div id="myCursor"></div>
+
+  <div id="pageTitle" class="color1_1">Portfolio</div>
+  <p id="presentation" class="normalText">Hi! I’m Federico, a communication designer <br> with a passion for videogame development.</p>
+  <p id="skills" class="normalText">I'm a multidisciplinary designer. I'm particularly good at...</p>
+
+  <div id="pImageDiv" class="normalImage">
+    <img src="materials/me1.jpg" alt="me1">
+    <img src="materials/me2.jpg" alt="me2" class="imageTransparent">
+  </div>
 
 </body>
 

@@ -1,12 +1,15 @@
-let myCursor;
-let profileImage;
+let pImageDiv;
+let insideImage = [];
 let me;
-let imgN = 1;
-let inside;
+let hasScrolled = false;
+let scrollPoint = 0;
+let isAtFirst = false;
+let isAtSecond = false;
+let isAtThird = false;
 
 let profileMargin;
-let rotDir = [];
-let rotDirIncrease = [];
+let dir = [];
+let dirIncrease = [];
 
 let vw;
 let vh;
@@ -17,61 +20,80 @@ function setup() {
     noCanvas();
     vw = windowWidth / 100;
     vh = windowHeight / 100;
-    myCursor = select("#myCursor");
 
     setProfileImage();
-    switchProfileImage();
 }
 
 function draw() {
     moveProfileImage();
-    myCursor.position(winMouseX, winMouseY);
+}
+
+function mouseWheel(event) {
+    let pageLength = select("html");
+    if (scrollPoint >= (0 - event.delta) && event.delta != 0 && (scrollPoint < int(pageLength.style("height")) || event.delta < 0)) {
+        scrollPoint += event.delta;
+        hasScrolled = true;
+    }
+
+    if (scrollPoint > 50 && scrollPoint < 1000) {
+        isAtFirst = true;
+    } else {isAtFirst = false;}
+
+    if (scrollPoint >= 1000 && scrollPoint < 2000) {
+        isAtSecond = true;
+    } else {isAtSecond = false;}
 }
 
 function setProfileImage() {
-    
-
-    let randomRot = [-1, 1];
+    profileMargin = [0 * vw, windowWidth - 15 * vw, 4 * vw, windowHeight - 15 * vw];
     let randomV = p5.Vector.random2D();
-    randomV.mult(1.5);
+    randomV.mult(2);
     let randomDir = randomV.array();
-    print(randomDir);
-    profileImage = select("#profileImage");
-    inside = select("#inside");
-    profileMargin = [0 * vw, windowWidth - 15 * vw, 0 * vw, windowHeight - 15 * vw];
 
-    me = createImg("materials/me1.jpg", "profileImage");
-    me.parent(inside);
-    rotDir = [0, random(5 * vw, windowWidth - 22 * vw), random(5 * vw, windowHeight - 22 * vw)];
-    rotDirIncrease = [random(randomRot), randomDir[0], randomDir[1]];
-    profileImage.position(rotDir[1], rotDir[2]);
-}
+    pImageDiv = select("#pImageDiv");
+    pImageDiv.position(dir[1], dir[2]);
+    insideImage = selectAll("#pImageDiv img");
+    print(insideImage);
 
-function switchProfileImage() {
-    me.remove();
-    me = createImg("materials/me"+imgN+".jpg", "profileImage");
-    me.parent(inside);
-    if (imgN <2) {
-        imgN++;
-    } else {imgN=1}
-    setTimeout(switchProfileImage, 600);
+    dir = [random(5 * vw, windowWidth - 22 * vw), random(5 * vw, windowHeight - 22 * vw)];
+    dirIncrease = [randomDir[0], randomDir[1]];
 }
 
 function moveProfileImage() {
 
-
-    if ((rotDirIncrease[1] > 0 && rotDir[1] + rotDirIncrease[1] >= profileMargin[1]) || (rotDirIncrease[1] < 0 && rotDir[1] - rotDirIncrease[1] <= profileMargin[0])) {
-        rotDirIncrease[1] *= -1;
+    if ((dirIncrease[0] > 0 && dir[0] + dirIncrease[0] >= profileMargin[1]) || (dirIncrease[0] < 0 && dir[0] - dirIncrease[0] <= profileMargin[0])) {
+        dirIncrease[0] *= -1;
     }
 
-    if ((rotDirIncrease[2] > 0 && rotDir[2] + rotDirIncrease[2] >= profileMargin[3]) || (rotDirIncrease[2] < 0 && rotDir[2] - rotDirIncrease[2] <= profileMargin[2])) {
-        rotDirIncrease[2] *= -1;
+    if ((dirIncrease[1] > 0 && dir[1] + dirIncrease[1] >= profileMargin[3]) || (dirIncrease[1] < 0 && dir[1] - dirIncrease[1] <= profileMargin[2])) {
+        dirIncrease[1] *= -1;
     }
 
-    let currentRot = rotDir[0] += rotDirIncrease[0];
-    profileImage.position(rotDir[1] += rotDirIncrease[1], rotDir[2] += rotDirIncrease[2]);
-    inside.style("transform", "rotate" + "(" + (-1 * currentRot) + "deg)");
-    profileImage.style("transform", "rotate" + "(" + currentRot + "deg)");
+    if (hasScrolled == false) {
+        pImageDiv.position(dir[0] += dirIncrease[0], dir[1] += dirIncrease[1]);
+    }
+    
+    if (isAtFirst == true) {
+        pImageDiv.position(10 * vw, 81 * vh);
+        pImageDiv.style("transition", "1s");
+        pImageDiv.addClass("enlargedImage");
+        insideImage[1].removeClass("imageTransparent");
+        insideImage[0].addClass("imageTransparent");
+    }
+    
+    if (hasScrolled ==true && isAtFirst == false && isAtSecond == false && isAtThird == false){
+        pImageDiv.position(dir[0], dir[1]);
+        pImageDiv.removeClass("enlargedImage");
+        insideImage[0].removeClass("imageTransparent");
+        insideImage[1].addClass("imageTransparent");
+        setTimeout(function () {
+            pImageDiv.position(dir[0] += dirIncrease[0], dir[1] += dirIncrease[1]);
+            pImageDiv.style("transition", "0s");
+        }, 1000);
+
+    }
+
+
 }
 
 function windowResized() {
