@@ -9,14 +9,13 @@ body {
     font-family: 'Rubik', sans-serif;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height:100vh;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
 
-/* Background colors */
+/* Background colors -------------------------------------------------------------------------------------------------------------------------*/
 
 .bcolor1_1 {
     background-color: #FED9B7;
@@ -66,7 +65,7 @@ body::-webkit-scrollbar {
     background-color: #912046;
 }
 
-/* Colors */
+/* Colors -------------------------------------------------------------------------------------------------------------------------*/
 
 .color1_1 {
     color: #FED9B7;
@@ -116,7 +115,7 @@ body::-webkit-scrollbar {
     color: #912046;
 }
 
-/* Navbar */
+/* Navbar -------------------------------------------------------------------------------------------------------------------------*/
 #navbar {
     position: fixed;
     border-bottom: solid 0.08vw #FED9B7;
@@ -217,7 +216,7 @@ body::-webkit-scrollbar {
     color: #912046;
 }
 
-/* Big title */
+/* Big title -------------------------------------------------------------------------------------------------------------------------*/
 
 #pageTitle {
     position: absolute;
@@ -228,7 +227,7 @@ body::-webkit-scrollbar {
     transform: translateY(-50%);
 }
 
-/* Normal text */
+/* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
 
 .normalText {
     position: absolute;
@@ -238,21 +237,79 @@ body::-webkit-scrollbar {
 }
 
 #presentation {
-    top: 100vh;
+    top: 120vh;
     left: 40vw;
 }
 
 #skills {
     left: 10vw;
-    top: 150vh;
+    top: 190vh;
 }
 
-/* Moving image */
+/* Skills ------------------------------------------------------------------------------------------------------------------------------ */
+
+#modeling {
+    position: absolute;
+    padding: 2.8vw 4vw;
+    top: 222.5vh;
+    left: 10vw;
+    text-align: center;
+    border-radius: 3vw;
+}
+
+#levelDesign{
+    background-image: url(materials/shape_skill.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    padding: 5.9vw 5vw 5.5vw 3.8vw;
+    top: 215.5vh;
+    left: 29vw;
+    text-align: center;
+    border-radius: 5vw;
+}
+
+#programming{
+    position: absolute;
+    padding: 2.2vw 3.8vw;
+    top: 223.6vh;
+    left: 46.5vw;
+    text-align: center;
+    border-radius: 5vw;
+}
+
+.skillsText {
+    font-weight: 500;
+    font-size: 1.3vw;
+}
+
+/* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#workContainer {
+    padding: 0vh 10vw;
+    position: absolute;
+    background-color: #FED9B7;
+    top: 270vh;
+    width: 200vw;
+    overflow-x: scroll;
+    margin: 0 0 20vh 0;
+}
+
+.workObject {
+    display: inline-block;
+    
+    margin: 1vw 0.5vw;
+    height: 70vh;
+    width: 28vw;
+    border-radius: 1vw;
+    background-image: url(materials/federico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #pImageDiv {
     position: absolute;
-    left: 0;
-    top: 10vw;
     -webkit-mask-image: url(materials/google_shape.svg);
     mask-image: url(materials/google_shape.svg);
     -webkit-mask-repeat: no-repeat;
@@ -266,16 +323,24 @@ body::-webkit-scrollbar {
     height: inherit;
     animation: inherit;
     animation-direction: reverse;
+    transition: opacity .5s;
 }
 
 .normalImage {
     width: 15vw;
     height: 15vw;
+    transition-timing-function: linear;
 }
 
-.enlargedImage {
+.imageSize1 {
     width: 25vw;
     height: 25vw;
+    transition: 1s ease-out;
+}
+
+.imageSize2 {
+    width: 20vw;
+    height: 20vw;
 }
 
 .imageTransparent {
@@ -288,4 +353,11 @@ body::-webkit-scrollbar {
     to {
         transform: rotate(360deg)
     }
+}
+
+.noTransitions {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
 }
