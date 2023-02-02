@@ -1,18 +1,30 @@
 /* Styles for the entire document */
 
-html,
-body {
+.pageStyle {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: #FFFCEE;
     font-family: 'Rubik', sans-serif;
+    margin-right: 0.5vw;
     -ms-overflow-style: none;
+    /* IE and Edge */
     scrollbar-width: none;
+    /* Firefox */
 }
 
-body::-webkit-scrollbar {
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
     display: none;
+}
+
+.container {
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Background colors -------------------------------------------------------------------------------------------------------------------------*/
@@ -123,6 +135,7 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 4vw;
     z-index: 2;
+    top: 0;
 }
 
 #myName {
@@ -219,91 +232,155 @@ body::-webkit-scrollbar {
 /* Big title -------------------------------------------------------------------------------------------------------------------------*/
 
 #pageTitle {
-    position: absolute;
+    display: block;
     font-weight: 800;
     font-size: 20.2vw;
-    left: 3vw;
-    top: 52vh;
-    transform: translateY(-50%);
+    text-align: center;
+    height: 20.2vw;
+}
+
+#titleContainer {
+    margin-top: 4vw;
+    align-items: flex-end;
+    height: 60vh;
 }
 
 /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
 
 .normalText {
-    position: absolute;
     font-weight: 500;
     font-size: 2vw;
     color: #4e4e4e;
 }
 
 #presentation {
-    top: 120vh;
-    left: 40vw;
+    margin-left: 25vw;
+}
+
+
+
+/* Skills ------------------------------------------------------------------------------------------------------------------------------ */
+#skillsContainer {
+    justify-content: left;
+    align-content: bottom;
+    height: 104vh;
 }
 
 #skills {
-    left: 10vw;
-    top: 190vh;
+    margin: 10vh 50vw 10vh 10vw;
 }
-
-/* Skills ------------------------------------------------------------------------------------------------------------------------------ */
 
 #modeling {
-    position: absolute;
     padding: 2.8vw 4vw;
-    top: 222.5vh;
-    left: 10vw;
-    text-align: center;
     border-radius: 3vw;
+    margin-left: 10vw;
+
 }
 
-#levelDesign{
+#levelDesign {
     background-image: url(materials/shape_skill.svg);
     background-repeat: no-repeat;
-    position: absolute;
-    padding: 5.9vw 5vw 5.5vw 3.8vw;
-    top: 215.5vh;
-    left: 29vw;
     text-align: center;
-    border-radius: 5vw;
+    padding: 5.9vw 3.5vw 5.5vw 3.8vw;
+
 }
 
-#programming{
-    position: absolute;
+#development {
     padding: 2.2vw 3.8vw;
-    top: 223.6vh;
-    left: 46.5vw;
-    text-align: center;
     border-radius: 5vw;
 }
 
 .skillsText {
     font-weight: 500;
     font-size: 1.3vw;
+    margin-right: 3vw;
+}
+
+.seeAll {
+    color: #9B5313;
+    padding: 0.5vw 1vw;
+    background-color: #FED9B7;
+    margin: 30vh 0 0vw 88vw;
+    align-self: flex-end;
+    border-radius: 50vw;
 }
 
 /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/* margin top + height should be = to .conteiner height*/
 #workContainer {
-    padding: 0vh 10vw;
-    position: absolute;
-    background-color: #FED9B7;
-    top: 270vh;
+    padding: 0vh 1vw 0 0.5vw;
+    /* background-color: #FED9B7; */
     width: 200vw;
     overflow-x: scroll;
-    margin: 0 0 20vh 0;
+    justify-content: left;
+    align-items: flex-start;
+    height: 85vh;
 }
 
 .workObject {
     display: inline-block;
-    
     margin: 1vw 0.5vw;
     height: 70vh;
-    width: 28vw;
-    border-radius: 1vw;
-    background-image: url(materials/federico.jpg);
+    width: 31.8vw;
+    border-radius: 1.3vw;
+    transition: 0.2s;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: solid 0.2vw #FED9B7;
+}
+
+.workText {
+    background-color: #FED9B7;
+    padding: 0.8vw 1vw;
+    font-weight: 500;
+    font-size: 1.5vw;
+    border-radius: 0 0 1vw 1vw;
+    color: #9B5313;
+}
+
+#work1 {
+    background-image: url(materials/chicken.png);
+}
+
+#work2 {
+    background-image: url(materials/morte.jpg);
+}
+
+#work3 {
+    background-image: url(materials/reportage.jpg);
+}
+
+#work4 {
+    background-image: url(materials/chicken.png);
+}
+
+#work5 {
+    background-image: url(materials/morte.jpg);
+}
+
+#work6 {
+    background-image: url(materials/reportage.jpg);
+}
+
+
+/* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#contactsContainer {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+
+#contactsSpace {
+    width: 90vw;
+    height: 30vh;
+    background-color: #00AFB9;
 }
 
 /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/

@@ -1,14 +1,23 @@
 let pImageDiv;
 let insideImage = [];
 let scrollPoint = 0;
+let scrollBound1;
+let scrollBound2;
+let scrollBound3;
 let pImagePositions;
 let xBounces = [];
 let yBounces = [];
 let transitionDuration = [];
 let imageInterval;
 let noRepeat = false;
+let noRepeat2 = false;
 let counter = 0;
 let hasScrolled = false;
+let workObjects;
+let translationAmount = 0;
+let body;
+let amountScrolled;
+let translationEnded = false;
 
 let profileMargin;
 let currentPos = [];
@@ -17,9 +26,9 @@ let dirIncrease = [];
 let vw;
 let vh;
 
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-//   }
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
 
 function preload() { }
 
@@ -31,25 +40,38 @@ function setup() {
     setProfileImage();
     calculateBallBounces();
     pImageDiv.position(xBounces[0], yBounces[0]);
+    workObjects = selectAll(".workObject");
+
+    scrollBound1 = document.getElementById("presentation").getBoundingClientRect().top + window.pageYOffset - windowHeight;
+    scrollBound2 = document.getElementById("skills").getBoundingClientRect().top + window.pageYOffset - windowHeight / 3 * 2;
+    scrollBound3 = document.getElementById("workContainer").getBoundingClientRect().top + window.pageYOffset - windowHeight / 2;
+    scrollBound3position = document.getElementById("workContainer").getBoundingClientRect().top + window.pageYOffset - 18 * vh;
+
+    body = select("body");
 }
 
 function draw() {
     moveProfileImage();
+    scrollPoint = window.scrollY;
 }
 
 //------------------------------------------------------------------------------------------------------------------------------------
 
 function setProfileImage() {
-    pImagePositions = [10 * vw, 100 * vh, 72 * vw, 210 * vh];
+    calculatePImagePositions();
     profileMargin = [-0.2 * vw, windowWidth - 14.8 * vw, 3.8 * vw, windowHeight - 14.8 * vw];
 
     pImageDiv = select("#pImageDiv");
     insideImage = selectAll("#pImageDiv img");
 }
 
-function mouseWheel() {
-    scrollPoint = document.documentElement.scrollTop;
-    print(scrollPoint);
+function calculatePImagePositions() {
+    pImagePositions = [10 * vw, 92 * vh, 72 * vw, 191 * vh];
+}
+
+function mouseWheel(event) {
+    amountScrolled = event.deltaY;
+
 }
 
 function calculateBallBounces() {
@@ -92,7 +114,6 @@ function calculateBallBounces() {
 
 function imageBounce() {
 
-    print(counter);
     pImageDiv.style("transition-duration", transitionDuration[counter] + "s");
     pImageDiv.position(xBounces[counter + 1], yBounces[counter + 1]);
 
@@ -122,13 +143,13 @@ function moveProfileImage() {
             if (hasScrolled == false) {
                 imageBounce();
             } else {
-                pImageDiv.position(50*vw, 50*vh);
+                pImageDiv.position(50 * vw, 50 * vh);
                 setTimeout(imageBounce, 500);
             }
-        
             noRepeat = true;
         }
-    } else if (scrollPoint > 0 && scrollPoint < 1100) {
+
+    } else if (scrollPoint > scrollBound1 && scrollPoint < scrollBound2) {
         clearInterval(imageInterval);
         noRepeat = false;
         hasScrolled = true;
@@ -136,15 +157,39 @@ function moveProfileImage() {
         pImageDiv.position(pImagePositions[0], pImagePositions[1]);
         pImageDiv.addClass("imageSize1");
         pImageDiv.removeClass("imageSize2");
-    } else if (scrollPoint >= 1100) {
+
+    } else if (scrollPoint >= scrollBound2 && scrollPoint < scrollBound3) {
         pImageDiv.position(pImagePositions[2], pImagePositions[3]);
         pImageDiv.addClass("imageSize2");
+
+    } else if (scrollPoint >= scrollBound3position) {
+        let containerScroll = 
+        print("is in");
+        if (translationAmount == 0) {
+            var handleEvent = function (e) {
+                e.preventDefault();
+                window.scrollTo({top: scrollBound3position, behavior: "smooth"});
+            };
+        }
+
+
+        // if (translationAmount > 0 && translationAmount < windowWidth) {
+        //     body.style("overflow-y", "hidden");
+        // } else {
+        //     body.style("overflow-y", "auto");
+        // }
+
+        for (let i = 0; i < workObjects.length; i++) {
+            workObjects[i].style("transform", "translateX(" + translationAmount * -1 + "px)");
+        }
     }
 
 }
 
+
+
 function windowResized() {
     vw = windowWidth / 100;
     vh = windowHeight / 100;
-    print(vw);
+    calculatePImagePositions();
 }
