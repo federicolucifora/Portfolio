@@ -15,7 +15,7 @@
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
-    display:none;
+    display: none;
 }
 
 .container {
@@ -197,6 +197,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
     /* For mobile phones: */
     #navbar {
         border-bottom: solid 0.08vw #FED9B7;
@@ -208,45 +209,45 @@
         font-weight: 400;
         font-size: 4vw;
     }
-    
+
     #navbarItemsContainer {
         margin-right: 3vw;
     }
-    
+
     .navbarItem {
         transition: 0.2s;
         border-radius: 1.2vw;
         padding: 0.2vw 1vw;
         margin-left: 1vw;
     }
-    
+
     .textNavbar {
         font-weight: 400;
         font-size: 4vw;
     }
-    
+
     .underline {
         width: 2vw;
         height: 1vw;
     }
-    
+
     #about:hover {
         background-color: #C3EAE4;
     }
-    
+
     #work:hover {
         background-color: #FFD7DC;
     }
-    
+
     #contacts:hover {
         background-color: #FFC5B3;
     }
-    
+
     .navbarItem:hover .underline {
         border-radius: 1.1vw;
         background-color: rgba(0, 0, 0, 0);
     }
-  }
+}
 
 
 /* Big title -------------------------------------------------------------------------------------------------------------------------*/
@@ -272,7 +273,7 @@
         font-size: 20.2vw;
         text-align: center;
     }
-    
+
     #titleContainer {
         margin-top: 10vw;
         align-items: center;
@@ -298,7 +299,7 @@
         font-size: 4.7vw;
         color: #4e4e4e;
     }
-    
+
     #presentation {
         margin-left: 35vw;
         margin-right: 5vw;
@@ -355,40 +356,46 @@
 
 @media only screen and (max-width: 768px) {
     #skillsContainer {
-        height: 50vh;
+        height: 80vh;
         flex-direction: column;
+        justify-content: center;
     }
-    
+
     #skills {
-        margin: 3vh 10vw 3vh 10vw;
+        margin: 3vh 10vw 8vh 10vw;
     }
-    
+
     #modeling {
-        padding: 2.8vw 4vw;
-        border-radius: 3vw;
+        padding: 7vw 9vw;
+        border-radius: 8.5vw;
         margin-left: 0;
-    
+
     }
-    
+
     #levelDesign {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-image: url(materials/shape_skill.svg);
         background-repeat: no-repeat;
-        text-align: center;
-        padding: 5.9vw 3.5vw 5.5vw 3.8vw;
-    
+        background-size: cover;
+        background-position: center;
+        height: 18vh;
+        width: 20vh;
     }
-    
+
     #development {
-        padding: 2.2vw 3.8vw;
-        border-radius: 5vw;
+        padding: 5vw 8vw;
+        border-radius: 50vw;
     }
-    
+
     .skillsText {
         font-weight: 500;
-        font-size: 1.3vw;
-        margin-right: 3vw;
+        font-size: 6vw;
+        margin-right: 0;
+        margin-bottom: 5vh;
     }
-    
+
     .seeAll {
         color: #9B5313;
         padding: 0.5vw 1vw;
@@ -466,9 +473,7 @@
     background-image: url(materials/reportage.jpg);
 } */
 
-@media only screen and (max-width: 768px) {
-    
-}
+@media only screen and (max-width: 768px) {}
 
 /* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -485,9 +490,7 @@
     background-color: #00AFB9;
 }
 
-@media only screen and (max-width: 768px) {
-    
-}
+@media only screen and (max-width: 768px) {}
 
 /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
