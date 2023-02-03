@@ -300,9 +300,11 @@
     color: #9B5313;
     padding: 0.5vw 1vw;
     background-color: #FED9B7;
-    margin: 30vh 0 0vw 88vw;
+    margin: 30vh 0 0vw 90.5vw;
     align-self: flex-end;
     border-radius: 50vw;
+    font-weight: 400;
+    font-size: 1vw;
 }
 
 /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -311,8 +313,8 @@
 #workContainer {
     padding: 0vh 1vw 0 0.5vw;
     /* background-color: #FED9B7; */
-    width: 200vw;
-    overflow-x: scroll;
+    width: 100vw;
+    overflow: scroll;
     justify-content: left;
     align-items: flex-start;
     height: 85vh;
@@ -323,7 +325,7 @@
     margin: 1vw 0.5vw;
     height: 70vh;
     width: 31.8vw;
-    border-radius: 1.3vw;
+    border-radius: 1vw;
     transition: 0.2s;
     background-repeat: no-repeat;
     background-size: cover;
@@ -335,12 +337,17 @@
 }
 
 .workText {
-    background-color: #FED9B7;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0.8vw 1vw;
     font-weight: 500;
     font-size: 1.5vw;
     border-radius: 0 0 1vw 1vw;
-    color: #9B5313;
+    color: #FED9B7;
+}
+
+.category {
+    font-weight: 400;
+    font-size: 1vw;
 }
 
 #work1 {
