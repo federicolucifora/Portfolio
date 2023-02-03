@@ -138,7 +138,7 @@ function imageBounce() {
 function moveProfileImage() {
 
     if (windowHeight > windowWidth) {
-        pImageDiv.position(pImagePositions[0], pImagePositions[1]);
+        pImageDiv.position(5*vw, 34*vh);
     } else if (scrollPoint == 0) {
         if (noRepeat == false) {
             pImageDiv.removeClass("imageSize1");
