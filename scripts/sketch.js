@@ -137,7 +137,9 @@ function imageBounce() {
 
 function moveProfileImage() {
 
-    if (scrollPoint == 0) {
+    if (windowHeight > windowWidth) {
+        pImageDiv.position(pImagePositions[0], pImagePositions[1]);
+    } else if (scrollPoint == 0) {
         if (noRepeat == false) {
             pImageDiv.removeClass("imageSize1");
             if (hasScrolled == false) {
@@ -163,12 +165,12 @@ function moveProfileImage() {
         pImageDiv.addClass("imageSize2");
 
     } else if (scrollPoint >= scrollBound3position) {
-        let containerScroll = 
-        print("is in");
+        let containerScroll =
+            print("is in");
         if (translationAmount == 0) {
             var handleEvent = function (e) {
                 e.preventDefault();
-                window.scrollTo({top: scrollBound3position, behavior: "smooth"});
+                window.scrollTo({ top: scrollBound3position, behavior: "smooth" });
             };
         }
 

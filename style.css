@@ -3,7 +3,7 @@
 .pageStyle {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: #FFFCEE;
     font-family: 'Rubik', sans-serif;
     margin-right: 0.5vw;
@@ -15,16 +15,17 @@
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
-    display: none;
+    display:none;
 }
 
 .container {
-    width: 100vw;
-    height: 92vh;
+    width: 100%;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border: solid 1px;
 }
 
 /* Background colors -------------------------------------------------------------------------------------------------------------------------*/
@@ -136,98 +137,117 @@
     height: 4vw;
     z-index: 2;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #myName {
-    top: 1.4vw;
-    height: 1vw;
-    left: 3vw;
-    position: absolute;
+    margin-left: 4vw;
     font-weight: 400;
     font-size: 1vw;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
+}
+
+#navbarItemsContainer {
+    display: flex;
+    margin-right: 3vw;
 }
 
 .navbarItem {
-    position: absolute;
-    text-align: center;
-    top: 0.6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 2.6vw;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
+    transition: 0.2s;
+    border-radius: 1.2vw;
+    padding: 0.2vw 1vw;
+    margin-left: 1vw;
 }
 
 .textNavbar {
-    position: absolute;
     font-weight: 400;
     font-size: 1vw;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .underline {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 2vw;
     height: 0.12vw;
-    transition: 0.2s;
-}
-
-#about {
-    right: 14.3vw;
-    width: 5vw;
-}
-
-#work {
-    right: 9.2vw;
-    width: 4.6vw;
-}
-
-#contacts {
-    right: 2.5vw;
-    width: 6.2vw;
-}
-
-#about:hover .underline {
-    height: inherit;
-    width: inherit;
-    border-radius: 1.1vw;
-    background-color: #C3EAE4;
 }
 
 #about:hover {
-    color: #134B4C;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-#work:hover .underline {
-    height: inherit;
-    width: inherit;
-    border-radius: 1.1vw;
-    background-color: #FFC5B3;
+    background-color: #C3EAE4;
 }
 
 #work:hover {
-    cursor: pointer;
-    color: #931F1F;
-}
-
-#contacts:hover .underline {
-    height: inherit;
-    width: inherit;
-    border-radius: 1.1vw;
     background-color: #FFD7DC;
 }
 
 #contacts:hover {
-    cursor: pointer;
-    color: #912046;
+    background-color: #FFC5B3;
 }
+
+.navbarItem:hover .underline {
+    border-radius: 1.1vw;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbarItem:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #navbar {
+        border-bottom: solid 0.08vw #FED9B7;
+        height: 10vw;
+    }
+
+    #myName {
+        margin-left: 4vw;
+        font-weight: 400;
+        font-size: 4vw;
+    }
+    
+    #navbarItemsContainer {
+        margin-right: 3vw;
+    }
+    
+    .navbarItem {
+        transition: 0.2s;
+        border-radius: 1.2vw;
+        padding: 0.2vw 1vw;
+        margin-left: 1vw;
+    }
+    
+    .textNavbar {
+        font-weight: 400;
+        font-size: 4vw;
+    }
+    
+    .underline {
+        width: 2vw;
+        height: 1vw;
+    }
+    
+    #about:hover {
+        background-color: #C3EAE4;
+    }
+    
+    #work:hover {
+        background-color: #FFD7DC;
+    }
+    
+    #contacts:hover {
+        background-color: #FFC5B3;
+    }
+    
+    .navbarItem:hover .underline {
+        border-radius: 1.1vw;
+        background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
 
 /* Big title -------------------------------------------------------------------------------------------------------------------------*/
 
@@ -245,6 +265,21 @@
     height: 60vh;
 }
 
+@media only screen and (max-width: 768px) {
+
+    #pageTitle {
+        font-weight: 800;
+        font-size: 20.2vw;
+        text-align: center;
+    }
+    
+    #titleContainer {
+        margin-top: 10vw;
+        align-items: center;
+        height: 15vh;
+    }
+}
+
 /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
 
 .normalText {
@@ -257,7 +292,18 @@
     margin-left: 25vw;
 }
 
-
+@media only screen and (max-width: 768px) {
+    .normalText {
+        font-weight: 500;
+        font-size: 4.7vw;
+        color: #4e4e4e;
+    }
+    
+    #presentation {
+        margin-left: 35vw;
+        margin-right: 5vw;
+    }
+}
 
 /* Skills ------------------------------------------------------------------------------------------------------------------------------ */
 #skillsContainer {
@@ -300,21 +346,67 @@
     color: #9B5313;
     padding: 0.5vw 1vw;
     background-color: #FED9B7;
-    margin: 30vh 0 0vw 90.5vw;
+    margin: 30vh 0 0vw 90.8%;
     align-self: flex-end;
     border-radius: 50vw;
     font-weight: 400;
     font-size: 1vw;
 }
 
+@media only screen and (max-width: 768px) {
+    #skillsContainer {
+        height: 50vh;
+        flex-direction: column;
+    }
+    
+    #skills {
+        margin: 3vh 10vw 3vh 10vw;
+    }
+    
+    #modeling {
+        padding: 2.8vw 4vw;
+        border-radius: 3vw;
+        margin-left: 0;
+    
+    }
+    
+    #levelDesign {
+        background-image: url(materials/shape_skill.svg);
+        background-repeat: no-repeat;
+        text-align: center;
+        padding: 5.9vw 3.5vw 5.5vw 3.8vw;
+    
+    }
+    
+    #development {
+        padding: 2.2vw 3.8vw;
+        border-radius: 5vw;
+    }
+    
+    .skillsText {
+        font-weight: 500;
+        font-size: 1.3vw;
+        margin-right: 3vw;
+    }
+    
+    .seeAll {
+        color: #9B5313;
+        padding: 0.5vw 1vw;
+        background-color: #FED9B7;
+        margin: 30vh 0 0vw 0;
+        align-self: center;
+        border-radius: 50vw;
+        font-weight: 400;
+        font-size: 1vw;
+    }
+}
+
 /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* margin top + height should be = to .conteiner height*/
 #workContainer {
-    padding: 0vh 1vw 0 0.5vw;
     /* background-color: #FED9B7; */
-    width: 100vw;
-    overflow: scroll;
+    width: 100%;
     justify-content: left;
     align-items: flex-start;
     height: 85vh;
@@ -322,9 +414,9 @@
 
 .workObject {
     display: inline-block;
-    margin: 1vw 0.5vw;
+    margin: 1vw 0vw 1vw 1vw;
     height: 70vh;
-    width: 31.8vw;
+    width: 31.4vw;
     border-radius: 1vw;
     transition: 0.2s;
     background-repeat: no-repeat;
@@ -362,7 +454,7 @@
     background-image: url(materials/reportage.jpg);
 }
 
-#work4 {
+/* #work4 {
     background-image: url(materials/chicken.png);
 }
 
@@ -372,13 +464,16 @@
 
 #work6 {
     background-image: url(materials/reportage.jpg);
-}
+} */
 
+@media only screen and (max-width: 768px) {
+    
+}
 
 /* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 #contactsContainer {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -388,6 +483,10 @@
     width: 90vw;
     height: 30vh;
     background-color: #00AFB9;
+}
+
+@media only screen and (max-width: 768px) {
+    
 }
 
 /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
