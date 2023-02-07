@@ -39,7 +39,19 @@ function setup() {
 
     setProfileImage();
     calculateBallBounces();
-    pImageDiv.position(xBounces[0], yBounces[0]);
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        if (windowHeight < windowWidth) {
+            pImageDiv.addClass("imageSize1");
+        } else {
+            pImageDiv.removeClass("imageSize1");
+        }
+
+    } else {
+        // false for not mobile device
+        pImageDiv.position(xBounces[0], yBounces[0]);
+    }
+
     workObjects = selectAll(".workObject");
 
     scrollBound1 = document.getElementById("presentation").getBoundingClientRect().top + window.pageYOffset - windowHeight;
@@ -51,7 +63,14 @@ function setup() {
 }
 
 function draw() {
-    moveProfileImage();
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // true for mobile device
+    } else {
+        // false for not mobile device
+        moveProfileImage();
+    }
+
     scrollPoint = window.scrollY;
 }
 
@@ -136,9 +155,8 @@ function imageBounce() {
 }
 
 function moveProfileImage() {
-
     if (windowHeight > windowWidth) {
-        pImageDiv.position(5*vw, 34*vh);
+        pImageDiv.position(5 * vw, 28.5 * vh);
     } else if (scrollPoint == 0) {
         if (noRepeat == false) {
             pImageDiv.removeClass("imageSize1");
@@ -191,7 +209,15 @@ function moveProfileImage() {
 
 
 function windowResized() {
+    print(xBounces);
     vw = windowWidth / 100;
     vh = windowHeight / 100;
+    counter = 1;
+    xBounces = [];
+    yBounces = [];
+    transitionDuration = [];
+    print(xBounces);
     calculatePImagePositions();
+    calculateBallBounces();
+
 }

@@ -1,0 +1,354 @@
+/* Styles for the entire document */
+
+.pageStyle {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    background-color: #FFFCEE;
+    font-family: 'Rubik', sans-serif;
+    margin-right: 0.5vw;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Background colors -------------------------------------------------------------------------------------------------------------------------*/
+
+.bcolor1_1 {
+    background-color: #FED9B7;
+}
+
+.bcolor1_2 {
+    background-color: #FFA528;
+}
+
+.bcolor1_3 {
+    background-color: #9B5313;
+}
+
+.bcolor2_1 {
+    background-color: #FFC5B3;
+}
+
+.bcolor2_2 {
+    background-color: #F07167;
+}
+
+.bcolor2_3 {
+    background-color: #931F1F;
+}
+
+.bcolor3_1 {
+    background-color: #C3EAE4;
+}
+
+.bcolor3_2 {
+    background-color: #00AFB9;
+}
+
+.bcolor3_3 {
+    background-color: #134B4C;
+}
+
+.bcolor4_1 {
+    background-color: #FFD7DC;
+}
+
+.bcolor4_2 {
+    background-color: #EF6A8A;
+}
+
+.bcolor4_3 {
+    background-color: #912046;
+}
+
+/* Colors -------------------------------------------------------------------------------------------------------------------------*/
+
+.color1_1 {
+    color: #FED9B7;
+}
+
+.color1_2 {
+    color: #FFA528;
+}
+
+.color1_3 {
+    color: #9B5313;
+}
+
+.color2_1 {
+    color: #FFC5B3;
+}
+
+.color2_2 {
+    color: #F07167;
+}
+
+.color2_3 {
+    color: #931F1F;
+}
+
+.color3_1 {
+    color: #C3EAE4;
+}
+
+.color3_2 {
+    color: #00AFB9;
+}
+
+.color3_3 {
+    color: #134B4C;
+}
+
+.color4_1 {
+    color: #FFD7DC;
+}
+
+.color4_2 {
+    color: #EF6A8A;
+}
+
+.color4_3 {
+    color: #912046;
+}
+
+/* Navbar -------------------------------------------------------------------------------------------------------------------------*/
+#navbar {
+    position: fixed;
+    border-bottom: solid 0.08vw #FED9B7;
+    background-color: #FFFCEE;
+    width: 100%;
+    height: 4vw;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#myName {
+    margin-left: 4vw;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+#navbarItemsContainer {
+    display: flex;
+    margin-right: 3vw;
+}
+
+.navbarItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 2.6vw;
+    transition: 0.2s;
+    border-radius: 1.2vw;
+    padding: 0.2vw 1vw;
+    margin-left: 1vw;
+    
+}
+
+.textNavbar {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.underline {
+    width: 2vw;
+    height: 0.12vw;
+}
+
+#about {
+    text-decoration-color: #00AFB9;
+}
+
+#about:hover {
+    background-color: #C3EAE4;
+}
+
+
+#work {
+    text-decoration-color: #EF6A8A;
+}
+
+#work:hover {
+    background-color: #FFD7DC;
+}
+
+
+#contacts {
+    text-decoration-color: #F07167;
+}
+
+#contacts:hover {
+    background-color: #FFC5B3;
+}
+
+.navbarItem:hover .underline {
+    border-radius: 1.1vw;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbarItem:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    #navbar {
+        border-bottom: solid 0.08vw #FED9B7;
+        height: 10vw;
+    }
+
+    #myName {
+        margin-left: 4vw;
+        font-weight: 400;
+        font-size: 4vw;
+    }
+
+    #navbarItemsContainer {
+        margin-right: 3vw;
+    }
+
+    .navbarItem {
+        transition: 0.2s;
+        border-radius: 1.2vh;
+        padding: 1vh 1vh;
+        margin-left: 1vw;
+    }
+
+    .textNavbar {
+        font-weight: 400;
+        font-size: 4vw;
+    }
+
+    #about:hover {
+        background-color: #C3EAE4;
+    }
+
+    #work:hover {
+        background-color: #FFD7DC;
+    }
+
+    #contacts:hover {
+        background-color: #FFC5B3;
+    }
+
+    .navbarItem:hover .underline {
+        border-radius: 1.1vw;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+
+/* Big title -------------------------------------------------------------------------------------------------------------------------*/
+
+#pageTitle {
+    display: block;
+    font-weight: 800;
+    font-size: 20.2vw;
+    text-align: center;
+    height: 20.2vw;
+    width: 100%;
+    margin: 10vw 0 10vw 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #pageTitle {
+        font-size: 19vw;
+        margin: 17vw 0 75vw 0;
+    }
+}
+
+/* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
+
+.normalText {
+    font-weight: 500;
+    font-size: 2vw;
+    color: #4e4e4e;
+}
+
+#presentation {
+    display: block;
+    margin: 0vw 0 5vw 38vw;
+    width: 50vw;
+    height: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+    .normalText {
+        font-weight: 500;
+        font-size: 2vh;
+        color: #4e4e4e;
+    }
+
+    #presentation {
+        margin: 0 auto;
+        width: 90vw;
+    }
+}
+
+
+
+/* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#pImageDiv {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    top: 37.5vw;
+    left: 8vw;
+    -webkit-mask-image: url(../materials/google_shape.svg);
+    mask-image: url(../materials/google_shape.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    animation: rotateMask 20s linear infinite;
+}
+
+#pImageDiv img {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    animation: inherit;
+    animation-direction: reverse;
+    transition: opacity .5s;
+}
+
+
+@keyframes rotateMask {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.noTransitions {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #pImageDiv {
+        top: 44vw;
+        left: 20vw;
+        width: 60vw;
+        height: 60vw;
+    }
+}

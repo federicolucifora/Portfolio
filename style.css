@@ -18,9 +18,14 @@
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     width: 100%;
-    height: 90vh;
+    height: 94vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,6 +167,7 @@
     border-radius: 1.2vw;
     padding: 0.2vw 1vw;
     margin-left: 1vw;
+    
 }
 
 .textNavbar {
@@ -174,12 +180,26 @@
     height: 0.12vw;
 }
 
+#about {
+    text-decoration-color: #00AFB9;
+}
+
 #about:hover {
     background-color: #C3EAE4;
 }
 
+
+#work {
+    text-decoration-color: #EF6A8A;
+}
+
 #work:hover {
     background-color: #FFD7DC;
+}
+
+
+#contacts {
+    text-decoration-color: #F07167;
 }
 
 #contacts:hover {
@@ -215,19 +235,14 @@
 
     .navbarItem {
         transition: 0.2s;
-        border-radius: 1.2vw;
-        padding: 0.2vw 1vw;
+        border-radius: 1.2vh;
+        padding: 1vh 1vh;
         margin-left: 1vw;
     }
 
     .textNavbar {
         font-weight: 400;
         font-size: 4vw;
-    }
-
-    .underline {
-        width: 2vw;
-        height: 1vw;
     }
 
     #about:hover {
@@ -295,17 +310,17 @@
 @media only screen and (max-width: 768px) {
     .normalText {
         font-weight: 500;
-        font-size: 4.7vw;
+        font-size: 2vh;
         color: #4e4e4e;
     }
 
     #presentation {
-        margin-left: 35vw;
+        margin-left: 37vw;
         margin-right: 5vw;
     }
 
     #presentationContainer {
-        height: 40vh;
+        height: 30vh;
     }
 }
 
@@ -316,7 +331,7 @@
 }
 
 #skills {
-    margin: 5vh 50vw 5vh 10vw;
+    margin: 0vh 50vw 10vh 10vw;
 }
 
 #modeling {
@@ -349,18 +364,17 @@
 
 @media only screen and (max-width: 768px) {
     #skillsContainer {
-        height: 80vh;
         flex-direction: column;
         justify-content: center;
     }
 
     #skills {
-        margin: 3vh 10vw 8vh 10vw;
+        margin: 3vh 6vh 8vh 6vh;
     }
 
     #modeling {
-        padding: 7vw 9vw;
-        border-radius: 8.5vw;
+        padding: 4.5vh 5.5vh;
+        border-radius: 5vh;
         margin-left: 0;
 
     }
@@ -373,20 +387,20 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 18vh;
-        width: 20vh;
+        height: 15vh;
+        width: 17vh;
     }
 
     #development {
-        padding: 5vw 8vw;
-        border-radius: 50vw;
+        padding: 3.5vh 5.5vh;
+        border-radius: 50vh;
     }
 
     .skillsText {
         font-weight: 500;
-        font-size: 6vw;
+        font-size: 2.2vh;
         margin-right: 0;
-        margin-bottom: 5vh;
+        margin-bottom: 7vh;
     }
 }
 
@@ -395,13 +409,13 @@
 /* margin top + height should be = to .conteiner height*/
 #workContainer {
     width: 100%;
-    justify-content: left;
+    justify-content: right;
     align-items: flex-start;
     height: 80vh;
 }
 
 .workObject {
-    margin: 1vw 0vw 0vw 1vw;
+    margin: 1vw 1vw 0vw 0vw;
     height: 70vh;
     width: 31.4vw;
     border-radius: 1vw;
@@ -458,9 +472,16 @@
     padding: 0.5vw 1vw;
     background-color: #FED9B7;
     border-radius: 50vw;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1vw;
-    margin: 0 0 0 89.8%;
+    margin-right: 1vw;
+    margin-top: 1vh;
+}
+
+.seeAll:hover {
+    color: #FED9B7;
+    background-color: #9B5313;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -471,7 +492,7 @@
         height: 70vh;
         flex-direction: column;
     }
-    
+
     .workObject {
         margin: 1%;
         height: 20vh;
@@ -480,7 +501,7 @@
         transition: 0.2s;
         border: solid 0.2% #FED9B7;
     }
-    
+
     .workText {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 2vw 3vw;
@@ -489,20 +510,20 @@
         border-radius: 0 0 1vw 1vw;
         color: #FED9B7;
     }
-    
+
     .category {
         font-weight: 400;
         font-size: 3vw;
     }
-    
+
     #work1 {
         background-image: url(materials/chicken.png);
     }
-    
+
     #work2 {
         background-image: url(materials/morte.jpg);
     }
-    
+
     #work3 {
         background-image: url(materials/reportage.jpg);
     }
@@ -513,9 +534,9 @@
         background-color: #FED9B7;
         border-radius: 50vw;
         font-weight: 400;
-        font-size: 3vw;
+        font-size: 4vw;
         align-self: flex-end;
-        margin: 1vw 2.5% 0 0;
+        margin: 1vh 2vw 0 0;
     }
 }
 
@@ -523,36 +544,68 @@
 
 #contactsContainer {
     width: 100%;
-    height: 10vh;
+    height: 12vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
     display: flex;
     justify-content: center;
+    margin-top: 1.5vh;
+    border-top: solid 1px #FED9B7;
 }
 
-#contactsSpace {
-    width: 90vw;
-    height: 5vh;
-    background-color: #00AFB9;
+.contactsObject {
+    width: 3vw;
+    height: 3vw;
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    background-position: center;
+    padding: 2vw;
+    margin: 0 1vw;
+    border-radius: 30%;
+}
+
+.contactsObject:hover {
+    cursor: pointer;
+}
+
+#instagram {
+    background-image: url(materials/instagram.png);
+}
+
+#linkedin {
+    background-image: url(materials/linkedin.png);
+}
+
+#mail {
+    background-image: url(materials/mail.png);
 }
 
 @media only screen and (max-width: 768px) {
     #contactsContainer {
         width: 100%;
         height: 10vh;
-        display: flex;
-        justify-content: center;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        margin-top: 1vh;
     }
-    
-    #contactsSpace {
-        width: 90vw;
-        height: 5vh;
-        background-color: #00AFB9;
+
+    .contactsObject {
+        width: 8vw;
+        height: 8vw;
+        background-size: 8vw;
+        padding: 5vw;
+        margin: 0 2vw;
+        border-radius: 30%;
     }
+
 }
 
 /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #pImageDiv {
     position: absolute;
+    top: 88vh;
+    left: 10vw;
     -webkit-mask-image: url(materials/google_shape.svg);
     mask-image: url(materials/google_shape.svg);
     -webkit-mask-repeat: no-repeat;
@@ -606,6 +659,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    #pImageDiv {
+        top: 28.5vh;
+        left: 5vw;
+    }
+
     .normalImage {
         width: 26vw;
         height: 26vw;
