@@ -6,7 +6,6 @@
     /* overflow-x: hidden; */
     background-color: #FFFCEE;
     font-family: 'Rubik', sans-serif;
-    margin-right: 0.5vw;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -245,7 +244,7 @@ a {
 }
 
 #levelDesign {
-    background-image: url(materials/shape_skill.svg);
+    background-image: url(../materials/shape_skill.svg);
     background-repeat: no-repeat;
     text-align: center;
     padding: 5.9vw 3.5vw 5.5vw 3.8vw;
@@ -286,7 +285,7 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(materials/shape_skill.svg);
+        background-image: url(../materials/shape_skill.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -347,15 +346,15 @@ a {
 }
 
 #work1 {
-    background-image: url(materials/chicken.png);
+    background-image: url(../materials/chicken.png);
 }
 
 #work2 {
-    background-image: url(materials/morte.jpg);
+    background-image: url(../materials/morte.jpg);
 }
 
 #work3 {
-    background-image: url(materials/reportage.jpg);
+    background-image: url(../materials/reportage.jpg);
 }
 
 /* #work4 {
@@ -420,15 +419,15 @@ a {
     }
 
     #work1 {
-        background-image: url(materials/chicken.png);
+        background-image: url(../materials/chicken.png);
     }
 
     #work2 {
-        background-image: url(materials/morte.jpg);
+        background-image: url(../materials/morte.jpg);
     }
 
     #work3 {
-        background-image: url(materials/reportage.jpg);
+        background-image: url(../materials/reportage.jpg);
     }
 
     .seeAll {
@@ -472,15 +471,15 @@ a {
 }
 
 #instagram {
-    background-image: url(materials/instagram.png);
+    background-image: url(../materials/instagram.png);
 }
 
 #linkedin {
-    background-image: url(materials/linkedin.png);
+    background-image: url(../materials/linkedin.png);
 }
 
 #mail {
-    background-image: url(materials/mail.png);
+    background-image: url(../materials/mail.png);
 }
 
 @media only screen and (max-width: 768px) {
@@ -509,8 +508,8 @@ a {
     position: absolute;
     top: 88vh;
     left: 10vw;
-    -webkit-mask-image: url(materials/google_shape.svg);
-    mask-image: url(materials/google_shape.svg);
+    -webkit-mask-image: url(../materials/google_shape.svg);
+    mask-image: url(../materials/google_shape.svg);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     animation: rotateMask 8s linear infinite;
