@@ -173,7 +173,7 @@ a {
 @media only screen and (max-width: 768px) {
 
     #pageTitle {
-        font-size: 19vw;
+        font-size: 21vw;
         margin: 17vw 0 13vw 0;
     }
 }
@@ -186,7 +186,7 @@ a {
 
 .workObject {
     margin: 1vw 0.5vw 1vw 0.5vw;
-    height: 31.2vw;
+    height: 28vw;
     width: 31.2vw;
     border-radius: 1vw;
     transition: 0.2s;
@@ -199,12 +199,16 @@ a {
     border: solid 0.2vw #FFC5B3;
 }
 
+.workObject:hover {
+    transform: scale(1.03);
+}
+
 .workText {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.8vw 1vw;
     font-weight: 500;
     font-size: 1.5vw;
-    border-radius: 0 0 1vw 1vw;
+    border-radius: 0 0 0.85vw 0.85vw;
     color: #FFC5B3;
 }
 
@@ -214,15 +218,39 @@ a {
 }
 
 #hellsChicken {
-    background-image: url(../materials/chicken.png);
+    background-image: url(../materials/hells_chicken/copertina.jpg)
 }
 
-#work2 {
-    background-image: url(../materials/morte.jpg);
+#deposito {
+    background-image: url(../materials/deposito/copertina.jpg);
 }
 
-#work3 {
-    background-image: url(../materials/reportage.jpg);
+#reportage {
+    background-image: url(../materials/reportage/copertina.jpg);
+}
+
+#aletheia {
+    background-image: url(../materials/aletheia/copertina.jpg);
+}
+
+#backstage {
+    background-image: url(../materials/backstage/copertina.jpg);
+}
+
+#grrr {
+    background-image: url(../materials/grrr/copertina.jpg);
+}
+
+#haring {
+    background-image: url(../materials/haring/copertina.jpg);
+}
+
+#mkwii {
+    background-image: url(../materials/mkwii/copertina.jpg);
+}
+
+#offthegrid {
+    background-image: url(../materials/off_the_grid/copertina.jpg);
 }
 
 @media only screen and (max-width: 768px) {
@@ -248,7 +276,7 @@ a {
         padding: 2vw 3vw;
         font-weight: 500;
         font-size: 5vw;
-        border-radius: 0 0 3vw 3vw;
+        border-radius: 0 0 2.8vw 2.8vw;
         color: #FFC5B3;
     }
     
