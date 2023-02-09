@@ -3,6 +3,7 @@ html {
     margin: 0;
     padding: 0;
 }
+
 .pageStyle {
     margin: 0;
     padding: 0;
@@ -185,31 +186,38 @@ a {
 }
 
 .projectText {
-    width: 60vw;
+    width: 55vw;
     font-weight: 500;
-    font-size: 1.4vw;
-    margin-right: 7vw;
+    font-size: 1.2vw;
+    margin-right: 10vw;
+    line-height: 1.8vw;
+    ;
 }
 
 .collaborators {
     width: 15vw;
     font-weight: 500;
-    font-size: 1.4vw;
-    line-height: 2vw;
+    font-size: 1.2vw;
+    line-height: 2.2vw;
 }
 
 .collaboratorsTitle {
     color: #FFC5B3;
     font-weight: 700;
-    font-size: 2.2vw;
+    font-size: 2vw;
     line-height: 2vw;
 }
+
+/* .mobileCollaborators {
+    display: none;
+} */
 
 .roundedImage {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 2vw;
+    flex-grow: 1;
 }
 
 .imagesContainer {
@@ -219,53 +227,196 @@ a {
     padding: 1vw 4vw 4vw 4vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .projectContainer {
+        margin: 14vw 4vw 0vw 4vw;
+        padding: 4vw;
+        border-radius: 4vw;
+    }
+
+    .projectTitle {
+        font-size: 6.3vw;
+        margin-bottom: 0.5vw;
+        color: #FFC5B3;
+    }
+
+    .projectSubtitle {
+        font-weight: 500;
+        font-size: 2.5vw;
+        margin-bottom: 3vw;
+        color: #FFC5B3;
+    }
+
+    .projectSubcontainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectText {
+        width: 100%;
+        font-weight: 500;
+        font-size: 2.5vw;
+        margin-right: 10vw;
+        margin-bottom: 3vw;
+        line-height: 4vw;
+    }
+
+    .collaborators {
+        width: 100%;
+        font-weight: 500;
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+
+    .collaboratorsTitle {
+        color: #FFC5B3;
+        font-weight: 700;
+        font-size: 3.5vw;
+        line-height: 2vw;
+    }
+
+    .desktopCollaborators {
+        display: none;
+    }
+
+    .roundedImage {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 2vw;
+        flex-grow: 1;
+    }
+
+    .imagesContainer {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1vw;
+        padding: 1vw 4vw 4vw 4vw;
+    }
+}
+
 /* Hell's Chicken ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 #hellsChickenCover {
-    flex-grow: 3;
     width: 60%;
     height: 40vw;
     background-image: url(../materials/hells_chicken/copertina.jpg);
 }
 
 #hellsChicken1 {
-    flex-grow: 3;
     width: 30%;
     height: 40vw;
     background-image: url(../materials/hells_chicken/screen1.jpg);
 }
 
 #hellsChicken2 {
-    flex-grow: 3;
     width: 90%;
     height: 35vw;
     background-image: url(../materials/hells_chicken/screen2.jpg);
 }
 
 #hellsChicken3 {
-    flex-grow: 3;
     width: 40%;
     height: 25vw;
     background-image: url(../materials/hells_chicken/screen3.jpg);
 }
 
 #hellsChicken4 {
-    flex-grow: 3;
     width: 50vw;
     height: 25vw;
     background-image: url(../materials/hells_chicken/screen4.jpg);
 }
 
 #hellsChicken5 {
-    flex-grow: 3;
     width: 40vw;
     height: 30vw;
     background-image: url(../materials/hells_chicken/screen5.jpg);
 }
 
 #hellsChicken6 {
-    flex-grow: 3;
     width: 30vw;
     height: 30vw;
     background-image: url(../materials/hells_chicken/screen6.jpg);
+}
+
+/* Deposito Cinerario Italiano ----------------------------------------------------------------------------------------------------------------------------- */
+
+#depositoCover {
+    width: 50%;
+    height: 40vw;
+    background-image: url(../materials/deposito/copertina.jpg);
+}
+
+#deposito1 {
+    width: 35%;
+    height: 40vw;
+    background-image: url(../materials/deposito/deposito1.jpg);
+}
+
+#deposito2 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/deposito/deposito2.jpg);
+}
+
+#deposito3 {
+    width: 50%;
+    height: 35vw;
+    background-image: url(../materials/deposito/deposito3.jpg);
+}
+
+#deposito4 {
+    width: 30vw;
+    height: 50vw;
+    background-image: url(../materials/deposito/deposito4.jpg);
+}
+
+#deposito5 {
+    width: 30vw;
+    height: 50vw;
+    background-image: url(../materials/deposito/deposito5.jpg);
+}
+
+
+/* Aletheia Photo Mosaic ----------------------------------------------------------------------------------------------------------------------------- */
+
+#aletheiaCover {
+    width: 50%;
+    height: 40vw;
+    background-image: url(../materials/aletheia/copertina.jpg);
+}
+
+#aletheia1 {
+    width: 100%;
+    height: 50%;
+    background-image: url(../materials/aletheia/aletheia1.jpg);
+    background-position: left;
+}
+
+#aletheia2 {
+    width: 100%;
+    height: 50%;
+    background-image: url(../materials/aletheia/aletheia2.jpg);
+
+}
+
+#aletheia4 {
+    width: 50%;
+    height: 35vw;
+    background-image: url(../materials/aletheia/aletheia3.jpg);
+}
+
+#aletheia3 {
+    width: 20%;
+    height: 35vw;
+    background-image: url(../materials/aletheia/aletheia4.png);
+    background-position: left;
+}
+
+#aletheiaSubcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 30vw;
+    height: 40vw;
 }
