@@ -1,0 +1,271 @@
+/* Styles for the entire document */
+html {
+    margin: 0;
+    padding: 0;
+}
+.pageStyle {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    background-color: #FFFCEE;
+    font-family: 'Rubik', sans-serif;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    color: #4e4e4e;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar -------------------------------------------------------------------------------------------------------------------------*/
+#navbar {
+    position: fixed;
+    border-bottom: solid 0.08vw #FFC5B3;
+    background-color: #FFFCEE;
+    width: 100%;
+    height: 4vw;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#myName {
+    margin-left: 4vw;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+#navbarItemsContainer {
+    display: flex;
+    margin-right: 3vw;
+}
+
+.navbarItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 2.6vw;
+    transition: 0.2s;
+    border-radius: 1.2vw;
+    padding: 0.2vw 1vw;
+    margin-left: 1vw;
+
+}
+
+.textNavbar {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.underline {
+    width: 2vw;
+    height: 0.12vw;
+}
+
+#about {
+    text-decoration-color: #00AFB9;
+}
+
+#about:hover {
+    background-color: #C3EAE4;
+}
+
+
+#work {
+    text-decoration-color: #EF6A8A;
+}
+
+#work:hover {
+    background-color: #FFD7DC;
+}
+
+
+#contacts {
+    text-decoration-color: #F07167;
+}
+
+#contacts:hover {
+    background-color: #FFC5B3;
+}
+
+.navbarItem:hover .underline {
+    border-radius: 1.1vw;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbarItem:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    #navbar {
+        border-bottom: solid 0.08vw #FED9B7;
+        height: 10vw;
+    }
+
+    #myName {
+        margin-left: 4vw;
+        font-weight: 400;
+        font-size: 4vw;
+    }
+
+    #navbarItemsContainer {
+        margin-right: 3vw;
+    }
+
+    .navbarItem {
+        transition: 0.2s;
+        border-radius: 1.2vh;
+        padding: 1vh 1vh;
+        margin-left: 1vw;
+    }
+
+    .textNavbar {
+        font-weight: 400;
+        font-size: 4vw;
+    }
+
+    #about:hover {
+        background-color: #C3EAE4;
+    }
+
+    #work:hover {
+        background-color: #FFD7DC;
+    }
+
+    #contacts:hover {
+        background-color: #FFC5B3;
+    }
+
+    .navbarItem:hover .underline {
+        border-radius: 1.1vw;
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+/* Project ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.projectContainer {
+    margin: 8vw 4vw 0vw 4vw;
+    padding: 4vw;
+    background-color: #FFFCEE;
+    border-radius: 2vw;
+}
+
+.projectTitle {
+    font-weight: 700;
+    font-size: 4vw;
+    margin-bottom: 0.5vw;
+    color: #FFC5B3;
+}
+
+.projectSubtitle {
+    font-weight: 500;
+    font-size: 1.4vw;
+    margin-bottom: 3vw;
+    color: #FFC5B3;
+}
+
+.projectSubcontainer {
+    display: flex;
+}
+
+.projectText {
+    width: 60vw;
+    font-weight: 500;
+    font-size: 1.4vw;
+    margin-right: 7vw;
+}
+
+.collaborators {
+    width: 15vw;
+    font-weight: 500;
+    font-size: 1.4vw;
+    line-height: 2vw;
+}
+
+.collaboratorsTitle {
+    color: #FFC5B3;
+    font-weight: 700;
+    font-size: 2.2vw;
+    line-height: 2vw;
+}
+
+.roundedImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2vw;
+}
+
+.imagesContainer {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1vw;
+    padding: 1vw 4vw 4vw 4vw;
+}
+
+/* Hell's Chicken ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#hellsChickenCover {
+    flex-grow: 3;
+    width: 60%;
+    height: 40vw;
+    background-image: url(../materials/hells_chicken/copertina.jpg);
+}
+
+#hellsChicken1 {
+    flex-grow: 3;
+    width: 30%;
+    height: 40vw;
+    background-image: url(../materials/hells_chicken/screen1.jpg);
+}
+
+#hellsChicken2 {
+    flex-grow: 3;
+    width: 90%;
+    height: 35vw;
+    background-image: url(../materials/hells_chicken/screen2.jpg);
+}
+
+#hellsChicken3 {
+    flex-grow: 3;
+    width: 40%;
+    height: 25vw;
+    background-image: url(../materials/hells_chicken/screen3.jpg);
+}
+
+#hellsChicken4 {
+    flex-grow: 3;
+    width: 50vw;
+    height: 25vw;
+    background-image: url(../materials/hells_chicken/screen4.jpg);
+}
+
+#hellsChicken5 {
+    flex-grow: 3;
+    width: 40vw;
+    height: 30vw;
+    background-image: url(../materials/hells_chicken/screen5.jpg);
+}
+
+#hellsChicken6 {
+    flex-grow: 3;
+    width: 30vw;
+    height: 30vw;
+    background-image: url(../materials/hells_chicken/screen6.jpg);
+}
