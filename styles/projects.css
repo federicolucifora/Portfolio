@@ -208,10 +208,6 @@ a {
     line-height: 2vw;
 }
 
-/* .mobileCollaborators {
-    display: none;
-} */
-
 .roundedImage {
     background-repeat: no-repeat;
     background-size: cover;
@@ -225,6 +221,12 @@ a {
     flex-flow: row wrap;
     gap: 1vw;
     padding: 1vw 4vw 4vw 4vw;
+}
+
+@media only screen and (min-width: 768px) {
+    .mobileCollaborators {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -330,32 +332,32 @@ a {
         width: 100%;
         height: 50vw;
     }
-    
+
     #hellsChicken1 {
         width: 100%;
         height: 50vw;
     }
-    
+
     #hellsChicken2 {
         width: 100%;
         height: 50vw;
     }
-    
+
     #hellsChicken3 {
         width: 100%;
         height: 50vw;
     }
-    
+
     #hellsChicken4 {
         width: 100%;
         height: 50vw;
     }
-    
+
     #hellsChicken5 {
         width: 100%;
         height: 50vw;
     }
-    
+
     #hellsChicken6 {
         width: 100%;
         height: 50vw;
@@ -401,6 +403,38 @@ a {
     background-image: url(../materials/deposito/deposito5.jpg);
 }
 
+@media only screen and (max-width: 768px) {
+    #depositoCover {
+        width: 100%;
+        height: 60vw;
+    }
+
+    #deposito1 {
+        width: 100%;
+        height: 60vw;
+    }
+
+    #deposito2 {
+        width: 100%;
+        height: 60vw;
+    }
+
+    #deposito3 {
+        width: 100%;
+        height: 60vw;
+    }
+
+    #deposito4 {
+        width: 100%;
+        height: 110vw;
+    }
+
+    #deposito5 {
+        width: 100%;
+        height: 110vw;
+    }
+}
+
 
 /* Aletheia Photo Mosaic ----------------------------------------------------------------------------------------------------------------------------- */
 
@@ -443,4 +477,518 @@ a {
     gap: 1vw;
     width: 30vw;
     height: 40vw;
+}
+
+@media only screen and (max-width: 768px) {
+    #aletheiaCover {
+        width: 100%;
+        height: 90vw;
+    }
+
+    #aletheiaSubcontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+        width: 100%;
+        height: 104vw;
+    }
+
+    #aletheia1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #aletheia2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #aletheia3 {
+        width: 100%;
+        height: 50vw;
+        background-size: contain;
+        background-position: center;
+    }
+
+    #aletheia4 {
+        width: 100%;
+        height: 50vw;
+    }
+}
+
+/* Curse of the Blind Dead ----------------------------------------------------------------------------------------------------------------------------- */
+
+#backstageCover {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/backstage/copertina.jpg);
+}
+
+#backstage1 {
+    width: 50%;
+    height: 35vw;
+    background-image: url(../materials/backstage/backstage1.jpg);
+}
+
+#backstage2 {
+    width: 50%;
+    height: 35vw;
+    background-image: url(../materials/backstage/backstage2.jpg);
+
+}
+
+#backstage3 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/backstage/backstage3.jpg);
+}
+
+#backstage4 {
+    width: 100%;
+    height: 50vw;
+    background-image: url(../materials/backstage/backstage4.jpg);
+}
+
+#backstage5 {
+    width: 60%;
+    height: 35vw;
+    background-image: url(../materials/backstage/backstage5.jpg);
+}
+
+#backstage6 {
+    width: 30%;
+    height: 35vw;
+    background-image: url(../materials/backstage/backstage6.jpg);
+}
+
+#backstage7 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/backstage/backstage7.jpg);
+}
+
+#backstage8 {
+    width: 45%;
+    height: 35vw;
+    background-image: url(../materials/backstage/backstage8.jpg);
+    background-position: right;
+}
+
+@media only screen and (max-width: 768px) {
+    #backstageCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage3 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage4 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage5 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage6 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage7 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #backstage8 {
+        width: 100%;
+        height: 50vw;
+    }
+}
+
+/* I Grrr ----------------------------------------------------------------------------------------------------------------------------- */
+
+#grrrCover {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/grrr/copertina.jpg);
+}
+
+#grrr1 {
+    width: 50%;
+    height: 30vw;
+    background-image: url(../materials/grrr/grrr1.jpg);
+}
+
+#grrr2 {
+    width: 30%;
+    height: 35vw;
+    background-image: url(../materials/grrr/grrr2.jpg);
+
+}
+
+#grrr3 {
+    width: 30%;
+    height: 35vw;
+    background-image: url(../materials/grrr/grrr3.jpg);
+}
+
+#grrr4 {
+    width: 30%;
+    height: 35vw;
+    background-image: url(../materials/grrr/grrr4.jpg);
+}
+
+#grrr5 {
+    width: 100%;
+    height: 45vw;
+    background-image: url(../materials/grrr/grrr5.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+    #grrrCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #grrr1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #grrr2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #grrr3 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #grrr4 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #grrr5 {
+        width: 100%;
+        height: 50vw;
+    }
+}
+
+/* Keith Haring ----------------------------------------------------------------------------------------------------------------------------- */
+
+#haringCover {
+    width: 100%;
+    height: 48vw;
+    background-image: url(../materials/haring/copertina.jpg);
+}
+
+#haring1 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/haring/haring1.jpg);
+}
+
+#haring2 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/haring/haring2.jpg);
+
+}
+
+#haring3 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/haring/haring3.jpg);
+}
+
+#haring4 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/haring/haring4.jpg);
+}
+
+#haring5 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/haring/haring5.jpg);
+}
+
+#haring6 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/haring/haring6.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+    #haringCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #haring1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #haring2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #haring3 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #haring4 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #haring5 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #haring6 {
+        width: 100%;
+        height: 50vw;
+    }
+}
+
+/* Mario Kart Wii ----------------------------------------------------------------------------------------------------------------------------- */
+
+#mkwiiCover {
+    width: 100%;
+    height: 40vw;
+    background-image: url(../materials/mkwii/copertina.jpg);
+}
+
+#mkwii1 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii1.jpg);
+}
+
+#mkwii2 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii2.jpg);
+
+}
+
+#mkwii3 {
+    width: 100%;
+    height: 40vw;
+    background-image: url(../materials/mkwii/mkwii3.jpg);
+}
+
+#mkwii4 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii4.jpg);
+}
+
+#mkwii5 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii5.jpg);
+}
+
+#mkwii6 {
+    width: 100%;
+    height: 40vw;
+    background-image: url(../materials/mkwii/mkwii6.jpg);
+}
+
+#mkwii7 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii7.jpg);
+}
+
+#mkwii8 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii8.jpg);
+}
+
+#mkwii9 {
+    width: 100%;
+    height: 40vw;
+    background-image: url(../materials/mkwii/mkwii9.jpg);
+}
+
+#mkwii10 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii10.jpg);
+}
+
+#mkwii11 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/mkwii/mkwii11.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+    #mkwiiCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii3 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii4 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii5 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii6 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii7 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii8 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii9 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii10 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #mkwii11 {
+        width: 100%;
+        height: 50vw;
+    }
+}
+
+/* Off The Grid ----------------------------------------------------------------------------------------------------------------------------- */
+
+#offthegridCover {
+    width: 100%;
+    height: 48vw;
+    background-image: url(../materials/offthegrid/copertina.jpg);
+}
+
+#offthegrid1 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/offthegrid/offthegrid1.jpg);
+}
+
+#offthegrid2 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/offthegrid/offthegrid2.jpg);
+
+}
+
+#offthegrid3 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/offthegrid/offthegrid3.jpg);
+}
+
+#offthegrid4 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/offthegrid/offthegrid4.jpg);
+}
+
+#offthegrid5 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/offthegrid/offthegrid5.jpg);
+}
+
+#offthegrid6 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/offthegrid/offthegrid6.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+    #offthegridCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #offthegrid1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #offthegrid2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #offthegrid3 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #offthegrid4 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #offthegrid5 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #offthegrid6 {
+        width: 100%;
+        height: 50vw;
+    }
 }

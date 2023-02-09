@@ -250,7 +250,7 @@ a {
 }
 
 #offthegrid {
-    background-image: url(../materials/off_the_grid/copertina.jpg);
+    background-image: url(../materials/offthegrid/copertina.jpg);
 }
 
 @media only screen and (max-width: 768px) {
