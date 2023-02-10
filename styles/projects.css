@@ -1,3 +1,7 @@
+body {
+    position: absolute;
+}
+
 /* Project ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .projectContainer {
@@ -5,6 +9,7 @@
     padding: 4vw;
     background-color: #FFFCEE;
     border-radius: 2vw;
+    display: block;
 }
 
 .projectTitle {
@@ -31,7 +36,6 @@
     font-size: 1.2vw;
     margin-right: 10vw;
     line-height: 1.8vw;
-    ;
 }
 
 .collaborators {
@@ -71,7 +75,7 @@
 
 @media only screen and (max-width: 768px) {
     .projectContainer {
-        margin: 14vw 4vw 0vw 4vw;
+        margin: 20vw 4vw 0vw 4vw;
         padding: 4vw;
         border-radius: 4vw;
     }

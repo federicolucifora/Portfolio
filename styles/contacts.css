@@ -1,43 +1,19 @@
-/* Big title -------------------------------------------------------------------------------------------------------------------------*/
-
-#pageTitle {
-    display: block;
-    font-weight: 800;
-    font-size: 20.2vw;
-    text-align: center;
-    height: 20.2vw;
-    width: 100%;
-    margin: 10vw 0 10vw 0;
-}
-
-@media only screen and (max-width: 768px) {
-
-    #pageTitle {
-        font-size: 19vw;
-        margin: 17vw 0 75vw 0;
-    }
-}
-
 /* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
-.contactsLine {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 2vw;
+#contactsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-bottom: 10vw;
 }
+
 .contactsObject {
-    width: 3vw;
-    height: 3vw;
+    width: 5vw;
+    height: 5vw;
     background-repeat: no-repeat;
-    background-size: 3vw;
+    background-size: 5vw;
     background-position: center;
     padding: 2vw;
-    margin: 0vw 3vw 0vw 45vw;
     border-radius: 30%;
-}
-
-.contactsText {
-    font-size: 2vw;
-    font-weight: 600;
 }
 
 .contactsObject:hover {
@@ -56,73 +32,31 @@
     background-image: url(../materials/mail.png);
 }
 
-@media only screen and (max-width: 768px) {
-    .contactsLine {
-        width: fit-content;
-        display: inline-flex;
-        align-items: center;
-        margin-bottom: 2vw;
-        justify-content: center;
+@media only screen and (max-width: 600px) {
+    #contactsContainer {
+        gap: 7vw;
+        margin-bottom: 10vw;
     }
     .contactsObject {
-        width: 17vw;
-        height: 17vw;
-        background-size: 10vw;
-        padding: 2vw;
-        margin: 0vw 0vw 0vw 9vw;
-        border-radius: 30%;
-    }
-    
-    .contactsText {
-        display: none;
+        width: 11vw;
+        height: 11vw;
+        background-size: 11vw;
+        padding: 4vw;
     }
 
 }
 
-/* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:600px) and (max-width: 992px) {
 
-#pImageDiv {
-    position: absolute;
-    width: 30vw;
-    height: 30vw;
-    top: 37.5vw;
-    left: 8vw;
-    -webkit-mask-image: url(../materials/google_shape.svg);
-    mask-image: url(../materials/google_shape.svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    animation: rotateMask 20s linear infinite;
-}
-
-#pImageDiv img {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    animation: inherit;
-    animation-direction: reverse;
-    transition: opacity .5s;
-}
-
-
-@keyframes rotateMask {
-    to {
-        transform: rotate(360deg)
+    #contactsContainer {
+        gap: 6vw;
+        margin-bottom: 10vw;
     }
-}
-
-.noTransitions {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-}
-
-@media only screen and (max-width: 768px) {
-
-    #pImageDiv {
-        top: 44vw;
-        left: 20vw;
-        width: 60vw;
-        height: 60vw;
+    .contactsObject {
+        width: 8vw;
+        height: 8vw;
+        background-size: 8vw;
+        padding: 4vw;
     }
+
 }

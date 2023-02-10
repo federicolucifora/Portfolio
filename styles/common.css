@@ -1,5 +1,6 @@
 /* Styles for the entire document */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: #FFFCEE;
@@ -133,6 +134,16 @@ a {
     color: #912046;
 }
 
+/* Big Title ----------------------------------------------------------------------------------------------------------------------- */
+
+#pageTitle {
+    display: block;
+    font-weight: 800;
+    font-size: 20.2vw;
+    text-align: center;
+    width: 100%;
+    margin: 10vw 0 10vw 0;
+}
 
 /* Navbar -------------------------------------------------------------------------------------------------------------------------*/
 #navbar {
@@ -193,24 +204,34 @@ a {
 }
 
 @media only screen and (max-width:600px) {
+
+    /* Big Title ----------------------------------------------------------------------------------------------------------------------- */
+
+    #pageTitle {
+        font-size: 19.4vw;
+        width: 100%;
+        margin: 20vw 0 10vw 0;
+    }
+
+    /* Navigation Bar ------------------------------------------------------------------------------------------------------------------- */
     #navbar {
         width: 95%;
         height: 12vw;
         padding: 0 1% 0 4%;
         border-bottom: solid 1px #FFC5B3;
     }
-    
+
     #navbarItemsContainer {
         gap: 1vw;
         margin-right: 2vw;
     }
-    
+
     .navbarItem {
         border-radius: 3.5vw;
         padding: 2.5vw 3vw;
-        
+
     }
-    
+
     .textNavbar {
         font-size: 3.5vw;
         transition: 0.2s;
@@ -233,21 +254,21 @@ a {
         height: 8vw;
         padding: 0 1% 0 2%;
     }
-    
+
     #navbarItemsContainer {
         gap: 1vw;
-        
+
     }
-    
+
     .navbarItem {
         border-radius: 2.2vw;
         padding: 1.5vw 1.7vw;
     }
-    
+
     .textNavbar {
         font-size: 2vw;
     }
-    
+
     .closeButton {
         display: none;
     }
