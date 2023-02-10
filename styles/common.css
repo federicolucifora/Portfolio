@@ -12,6 +12,27 @@ a {
     color: inherit;
 }
 
+/* Styles for the entire document */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(207, 207, 207);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5vw;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* Background colors -------------------------------------------------------------------------------------------------------------------------*/
 
 .bcolor1_1 {
@@ -180,8 +201,8 @@ a {
     }
     
     #navbarItemsContainer {
-        display: flex;
         gap: 1vw;
+        margin-right: 2vw;
     }
     
     .navbarItem {
@@ -207,7 +228,29 @@ a {
 }
 
 @media only screen and (min-width: 600px) and (max-width:992px) {
-
+    #navbar {
+        width: 97%;
+        height: 8vw;
+        padding: 0 1% 0 2%;
+    }
+    
+    #navbarItemsContainer {
+        gap: 1vw;
+        
+    }
+    
+    .navbarItem {
+        border-radius: 2.2vw;
+        padding: 1.5vw 1.7vw;
+    }
+    
+    .textNavbar {
+        font-size: 2vw;
+    }
+    
+    .closeButton {
+        display: none;
+    }
 }
 
 @media only screen and (min-width:992px) {

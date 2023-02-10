@@ -9,30 +9,24 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
+    <link rel="stylesheet" href="styles/common.css">
+    <script src="addons/p5.js"></script>
+    <script src="addons/p5.sound.js"></script>
+    <script src="scripts/navbar.js"></script>
     <link rel="stylesheet" href="styles/contacts.css">
-    <link rel="stylesheet" href="styles/colors.css">
 </head>
 
 <body class="pageStyle">
 
     <div id="navbar">
-        <div id="myName"><a href="index.html">Federico Lucifora</a></div>
+        <div id="closeButton" class="closeButton">&lt</div>
+        <a id="myName" href="index.html" class="textNavbar">Federico Lucifora</a>
         <div id="navbarItemsContainer">
-            <div id="about" class="navbarItem textNavbar">
-                <a href="about.html">
-                    about
-                </a>
-            </div>
-            <div id="work" class="navbarItem textNavbar">
-                <a href="work.html">
-                    work
-                </a>
-            </div>
-            <div id="contacts" class="navbarItem textNavbar">
-                <a href="contacts.html">
-                    contacts
-                </a>
-            </div>
+            <a href="about.html" id="about"
+                class="navbarItem textNavbar collapsedNavbarItem bcolor1_1 color1_3">about</a>
+            <a href="work.html" id="work" class="navbarItem textNavbar collapsedNavbarItem bcolor2_1 color2_3">work</a>
+            <a href="contacts.html" id="contacts"
+                class="navbarItem textNavbar collapsedNavbarItem bcolor3_1 color3_3">contacts</a>
         </div>
     </div>
 
