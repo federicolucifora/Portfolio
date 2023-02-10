@@ -26,6 +26,7 @@ function hideMenu() {
         navbarItems[i].addClass("collapsedNavbarItem");
     }
     myName.removeClass("collapsedNavbarItem");
+    itemsContainer.style("margin-right","2vw");
     closeButton.removeClass("visibleCloseButton");
 }
 
@@ -34,5 +35,6 @@ function showMenu() {
         navbarItems[i].removeClass("collapsedNavbarItem");
     }
     myName.addClass("collapsedNavbarItem");
+    itemsContainer.style("margin-right","0vw");
     setTimeout(function() {closeButton.addClass("visibleCloseButton")}, 200);
 }

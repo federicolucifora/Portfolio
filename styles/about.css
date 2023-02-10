@@ -186,5 +186,6 @@
         left: 20vw;
         width: 60vw;
         height: 60vw;
+        animation: none;
     }
 }
