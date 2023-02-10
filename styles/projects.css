@@ -914,45 +914,45 @@ a {
 /* Off The Grid ----------------------------------------------------------------------------------------------------------------------------- */
 
 #offthegridCover {
-    width: 100%;
-    height: 48vw;
+    width: 40%;
+    height: 30vw;
     background-image: url(../materials/offthegrid/copertina.jpg);
 }
 
 #offthegrid1 {
-    width: 30%;
+    width: 50%;
     height: 30vw;
     background-image: url(../materials/offthegrid/offthegrid1.jpg);
 }
 
 #offthegrid2 {
-    width: 40%;
-    height: 30vw;
+    width: 100%;
+    height: 45vw;
     background-image: url(../materials/offthegrid/offthegrid2.jpg);
 
 }
 
 #offthegrid3 {
-    width: 30%;
-    height: 30vw;
+    width: 45%;
+    height: 24vw;
     background-image: url(../materials/offthegrid/offthegrid3.jpg);
 }
 
 #offthegrid4 {
-    width: 40%;
-    height: 30vw;
+    width: 45%;
+    height: 24vw;
     background-image: url(../materials/offthegrid/offthegrid4.jpg);
 }
 
 #offthegrid5 {
-    width: 30%;
-    height: 30vw;
+    width: 40%;
+    height: 25vw;
     background-image: url(../materials/offthegrid/offthegrid5.jpg);
 }
 
 #offthegrid6 {
     width: 40%;
-    height: 30vw;
+    height: 25vw;
     background-image: url(../materials/offthegrid/offthegrid6.jpg);
 }
 
@@ -990,5 +990,76 @@ a {
     #offthegrid6 {
         width: 100%;
         height: 50vw;
+    }
+}
+
+/* L'Abbandono della val seriana ----------------------------------------------------------------------------------------------------------------------------- */
+
+#reportageCover {
+    width: 60%;
+    height: 42vw;
+    background-image: url(../materials/reportage/copertina.jpg);
+}
+
+#reportage1 {
+    width: 30%;
+    height: 42vw;
+    background-image: url(../materials/reportage/reportage1.jpg);
+}
+
+#reportage2 {
+    width: 30%;
+    height: 42vw;
+    background-image: url(../materials/reportage/reportage2.jpg);
+
+}
+
+#reportage3 {
+    width: 60%;
+    height: 42vw;
+    background-image: url(../materials/reportage/reportage3.jpg);
+}
+
+#reportage4 {
+    width: 30%;
+    height: 42vw;
+    background-image: url(../materials/reportage/reportage4.jpg);
+}
+
+#reportage5 {
+    width: 50%;
+    height: 42vw;
+    background-image: url(../materials/reportage/reportage5.png);
+}
+
+@media only screen and (max-width: 768px) {
+    #reportageCover {
+        width: 100%;
+        height: 65vw;
+    }
+
+    #reportage1 {
+        width: 100%;
+        height: 125vw;
+    }
+
+    #reportage2 {
+        width: 100%;
+        height: 125vw;
+    }
+
+    #reportage3 {
+        width: 100%;
+        height: 65vw;
+    }
+
+    #reportage4 {
+        width: 100%;
+        height: 125vw;
+    }
+
+    #reportage5 {
+        width: 100%;
+        height: 60vw;
     }
 }
