@@ -415,3 +415,7 @@
         transition-timing-function: linear;
     }
 }
+
+@media only screen and (min-width: 1200px) {
+    
+}

@@ -1,21 +1,5 @@
-/* Big title -------------------------------------------------------------------------------------------------------------------------*/
-
-#pageTitle {
-    display: block;
-    font-weight: 800;
-    font-size: 20.2vw;
-    text-align: center;
-    height: 20.2vw;
-    width: 100%;
-    margin: 10vw 0 10vw 0;
-}
-
-@media only screen and (max-width: 768px) {
-
-    #pageTitle {
-        font-size: 19vw;
-        margin: 17vw 0 75vw 0;
-    }
+body {
+    padding-bottom: 5vw;
 }
 
 /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
@@ -30,19 +14,6 @@
     margin: 0vw 0 10vw 38vw;
     width: 50vw;
     height: fit-content;
-}
-
-@media only screen and (max-width: 768px) {
-    .normalText {
-        font-weight: 500;
-        font-size: 5vw;
-        color: #4e4e4e;
-    }
-
-    #presentation {
-        margin: 0 auto;
-        width: 90vw;
-    }
 }
 
 /* Title Text */
@@ -69,7 +40,7 @@
     font-size: 1.5vw;
     border-radius: 2.3vw;
     text-align: center;
-    width: 12vw;
+    width: 8vw;
 }
 
 .elementText {
@@ -93,61 +64,13 @@
     margin-top: 6vw;
 }
 
-@media only screen and (max-width: 768px) {
-    .titleText {
-        font-size: 8vw;
-        margin: 5vw 5vw 3vw 5vw;
-        padding-bottom: 1vw;
-        display: block;
-    }
-
-    .elementContainer {
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .elementDate {
-        display: block;
-        margin: 0 2vw 2vw 5vw;
-        font-weight: 500;
-        font-size: 4vw;
-        border-radius: 4vw;
-        text-align: center;
-        width: 12vw;
-        padding: 3vw;
-    }
-
-    .elementText {
-        display: block;
-        font-size: 5vw;
-        font-weight: 500;
-        padding-top: 1vw;
-        margin: 0 4vw 5vw 5vw
-    }
-
-    .elementSubtitle {
-        font-size: 4vw;
-        font-weight: 400;
-
-    }
-
-    #experience {
-        border-bottom: solid 1px #FED9B7;
-    }
-
-    #education {
-        border-bottom: solid 1px #FFC5B3;
-        margin-top: 6vw;
-    }
-}
-
 /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #pImageDiv {
     position: absolute;
     width: 25vw;
     height: 25vw;
-    top: 37.5vw;
+    top: 40vw;
     left: 8vw;
     -webkit-mask-image: url(../materials/google_shape.svg);
     mask-image: url(../materials/google_shape.svg);
@@ -172,20 +95,110 @@
     }
 }
 
-.noTransitions {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-}
+@media only screen and (max-width: 600px) {
 
-@media only screen and (max-width: 768px) {
+    /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
+
+    .normalText {
+        font-size: 4.5vw;
+    }
+
+    #presentation {
+        margin: 74vw 0 9vw 5vw;
+        width: 90vw;
+    }
+
+    /* Title Text */
+
+    .titleText {
+        font-size: 8vw;
+        margin: 0 9vw 3vw 5vw;
+    }
+
+    /* Experience */
+
+    .elementDate {
+        margin: 0 4vw 2vw 5vw;
+        font-size: 4vw;
+        border-radius: 3.5vw;
+        width: 16vw;
+        height: 5vw;
+    }
+
+    .elementText {
+        font-size: 4.5vw;
+        padding-top: 0.3vw;
+        width: 70vw;
+        margin-bottom: 5vw;
+    }
+
+    .elementSubtitle {
+        font-size: 3.5vw;
+    }
+
+    #education {
+        margin-top: 5vw;
+    }
+
+    /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
     #pImageDiv {
-        top: 44vw;
-        left: 20vw;
         width: 60vw;
         height: 60vw;
+        top: 48.5vw;
+        left: 20vw;
         animation: none;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+
+    /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
+
+    .normalText {
+        font-size: 2.3vw;
+    }
+
+    #presentation {
+        margin: 0vw 0 9vw 40vw;
+    }
+
+    /* Title Text */
+
+    .titleText {
+        font-size: 5vw;
+        margin: 0 9vw 3vw 5vw;
+    }
+
+    /* Experience */
+
+    .elementDate {
+        margin: 0 4vw 2vw 5vw;
+        font-size: 1.8vw;
+        border-radius: 2.4vw;
+        width: 10vw;
+    }
+
+    .elementText {
+        font-size: 2.3vw;
+        padding-top: 0.3vw;
+    }
+
+    .elementSubtitle {
+        font-size: 1.8vw;
+    }
+
+    #education {
+        margin-top: 5vw;
+    }
+
+    /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    #pImageDiv {
+        width: 29vw;
+        height: 29vw;
+        top: 41.5vw;
+        left: 5vw;
+        animation: rotateMask 20s linear infinite;
     }
 }

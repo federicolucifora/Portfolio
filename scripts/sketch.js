@@ -23,6 +23,11 @@ let profileMargin;
 let currentPos = [];
 let dirIncrease = [];
 
+let itemsContainer;
+let navbarItems = [];
+let myName;
+let closeButton;
+
 let vw;
 let vh;
 
@@ -36,6 +41,13 @@ function setup() {
     noCanvas();
     vw = windowWidth / 100;
     vh = windowHeight / 100;
+
+    closeButton = select("#closeButton");
+    closeButton.mouseClicked(hideMenu);
+    itemsContainer = select("#navbarItemsContainer");
+    itemsContainer.mouseClicked(showMenu);
+    navbarItems = selectAll(".navbarItem");
+    myName = select("#myName");
 
     setProfileImage();
     calculateBallBounces();
@@ -206,7 +218,23 @@ function moveProfileImage() {
 
 }
 
+function hideMenu() {
+    for (let i = 0; i < navbarItems.length; i++) {
+        navbarItems[i].addClass("collapsedNavbarItem");
+    }
+    myName.removeClass("collapsedNavbarItem");
+    itemsContainer.style("margin-right","2vw");
+    closeButton.removeClass("visibleCloseButton");
+}
 
+function showMenu() {
+    for (let i = 0; i < navbarItems.length; i++) {
+        navbarItems[i].removeClass("collapsedNavbarItem");
+    }
+    myName.addClass("collapsedNavbarItem");
+    itemsContainer.style("margin-right","0vw");
+    setTimeout(function() {closeButton.addClass("visibleCloseButton")}, 200);
+}
 
 function windowResized() {
     print(xBounces);

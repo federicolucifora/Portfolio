@@ -162,6 +162,7 @@ a {
 #navbarItemsContainer {
     display: flex;
     gap: 0.5vw;
+    margin-right: 0;
 }
 
 .navbarItem {
@@ -223,7 +224,7 @@ a {
 
     #navbarItemsContainer {
         gap: 1vw;
-        margin-right: 2vw;
+        margin-right: 0vw;
     }
 
     .navbarItem {
@@ -257,7 +258,7 @@ a {
 
     #navbarItemsContainer {
         gap: 1vw;
-
+        margin-right: 0;
     }
 
     .navbarItem {
