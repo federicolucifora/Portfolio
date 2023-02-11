@@ -17,12 +17,12 @@ let workObjects;
 let translationAmount = 0;
 let body;
 let amountScrolled;
-let translationEnded = false;
 
 let profileMargin;
 let currentPos = [];
 let dirIncrease = [];
 
+let navbar;
 let itemsContainer;
 let navbarItems = [];
 let myName;
@@ -42,6 +42,7 @@ function setup() {
     vw = windowWidth / 100;
     vh = windowHeight / 100;
 
+    navbar = select("#navbar");
     closeButton = select("#closeButton");
     closeButton.mouseClicked(hideMenu);
     itemsContainer = select("#navbarItemsContainer");
@@ -75,6 +76,10 @@ function setup() {
 }
 
 function draw() {
+
+    if (document.documentElement.scrollTop > 0) {
+        navbar.style("border-color", "#FFC5B3");
+    } else { navbar.style("border-color", "#FFFCEE") };
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // true for mobile device
@@ -155,15 +160,6 @@ function imageBounce() {
         }
 
     }, transitionDuration[counter] * 1000)
-
-
-
-    // imageInterval = window.setInterval(function () {
-    //     pImageDiv.style("transition-duration", transitionDuration[counter-1]+"s");
-    //     pImageDiv.position(xBounces[counter], yBounces[counter]);
-    //     print(transitionDuration[counter-1]);
-    //     counter++;
-    // }, 3000);
 }
 
 function moveProfileImage() {
@@ -194,26 +190,6 @@ function moveProfileImage() {
         pImageDiv.position(pImagePositions[2], pImagePositions[3]);
         pImageDiv.addClass("imageSize2");
 
-    } else if (scrollPoint >= scrollBound3position) {
-        let containerScroll =
-            print("is in");
-        if (translationAmount == 0) {
-            var handleEvent = function (e) {
-                e.preventDefault();
-                window.scrollTo({ top: scrollBound3position, behavior: "smooth" });
-            };
-        }
-
-
-        // if (translationAmount > 0 && translationAmount < windowWidth) {
-        //     body.style("overflow-y", "hidden");
-        // } else {
-        //     body.style("overflow-y", "auto");
-        // }
-
-        for (let i = 0; i < workObjects.length; i++) {
-            workObjects[i].style("transform", "translateX(" + translationAmount * -1 + "px)");
-        }
     }
 
 }
@@ -237,14 +213,12 @@ function showMenu() {
 }
 
 function windowResized() {
-    print(xBounces);
     vw = windowWidth / 100;
     vh = windowHeight / 100;
     counter = 1;
     xBounces = [];
     yBounces = [];
     transitionDuration = [];
-    print(xBounces);
     calculatePImagePositions();
     calculateBallBounces();
 

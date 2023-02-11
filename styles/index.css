@@ -1,4 +1,7 @@
-
+html,
+body {
+    overflow-x: hidden;
+}
 
 .container {
     width: 100%;
@@ -8,35 +11,17 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
 /* Big title -------------------------------------------------------------------------------------------------------------------------*/
 
 #pageTitle {
-    display: block;
-    font-weight: 800;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20.2vw;
-    text-align: center;
-    height: 20.2vw;
-}
-
-#titleContainer {
-    margin-top: 4vw;
-    align-items: flex-end;
-    height: 60vh;
-}
-
-@media only screen and (max-width: 768px) {
-
-    #pageTitle {
-        font-weight: 800;
-        font-size: 20.2vw;
-        text-align: center;
-    }
-
-    #titleContainer {
-        margin-top: 10vw;
-        align-items: center;
-        height: 15vh;
-    }
+    height: 100vh;
 }
 
 /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
@@ -44,44 +29,23 @@
 .normalText {
     font-weight: 500;
     font-size: 2vw;
-    color: #4e4e4e;
 }
 
 #presentation {
-    margin-left: 25vw;
-}
-
-@media only screen and (max-width: 768px) {
-    .normalText {
-        font-weight: 500;
-        font-size: 2vh;
-        color: #4e4e4e;
-    }
-
-    #presentation {
-        margin-left: 37vw;
-        margin-right: 5vw;
-    }
-
-    #presentationContainer {
-        height: 30vh;
-    }
+    display: block;
+    margin: 12vh 10vw 55vh 45vw;
 }
 
 /* Skills ------------------------------------------------------------------------------------------------------------------------------ */
-#skillsContainer {
-    justify-content: left;
-    align-content: center;
-}
 
 #skills {
-    margin: 0vh 50vw 10vh 10vw;
+    margin: 0vh 58.5vw 10vh 10vw;
 }
 
 #modeling {
     padding: 2.8vw 4vw;
     border-radius: 3vw;
-    margin-left: 10vw;
+    margin: 0 3vw 20vw 10vw;
 
 }
 
@@ -102,66 +66,22 @@
     font-weight: 500;
     font-size: 1.3vw;
     margin-right: 3vw;
-}
-
-
-
-@media only screen and (max-width: 768px) {
-    #skillsContainer {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #skills {
-        margin: 3vh 6vh 8vh 6vh;
-    }
-
-    #modeling {
-        padding: 4.5vh 5.5vh;
-        border-radius: 5vh;
-        margin-left: 0;
-
-    }
-
-    #levelDesign {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url(../materials/shape_skill.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 15vh;
-        width: 17vh;
-    }
-
-    #development {
-        padding: 3.5vh 5.5vh;
-        border-radius: 50vh;
-    }
-
-    .skillsText {
-        font-weight: 500;
-        font-size: 2.2vh;
-        margin-right: 0;
-        margin-bottom: 7vh;
-    }
+    display: inline-block;
 }
 
 /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* margin top + height should be = to .conteiner height*/
 #workContainer {
-    width: 100%;
-    justify-content: right;
-    align-items: flex-start;
-    height: 80vh;
+    padding: 0 1vw;
+    margin-bottom: 1.2vw;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1vw;
 }
 
 .workObject {
-    margin: 1vw 1vw 0vw 0vw;
-    height: 70vh;
-    width: 31.4vw;
+    height: 28vw;
+    width: 30%;
+    flex-grow: 1;
     border-radius: 1vw;
     transition: 0.2s;
     background-repeat: no-repeat;
@@ -170,7 +90,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border: solid 0.2vw #FED9B7;
+    border: solid 0.2vw #FFC5B3;
+}
+
+.workObject:hover {
+    transform: scale(1.03);
 }
 
 .workText {
@@ -178,8 +102,8 @@
     padding: 0.8vw 1vw;
     font-weight: 500;
     font-size: 1.5vw;
-    border-radius: 0 0 1vw 1vw;
-    color: #FED9B7;
+    border-radius: 0 0 0.85vw 0.85vw;
+    color: #FFC5B3;
 }
 
 .category {
@@ -187,101 +111,32 @@
     font-size: 1vw;
 }
 
-#work1 {
-    background-image: url(../materials/chicken.png);
+#hellsChicken {
+    background-image: url(../materials/hells_chicken/copertina.jpg)
 }
 
-#work2 {
-    background-image: url(../materials/morte.jpg);
+#mkwii {
+    background-image: url(../materials/mkwii/copertina.jpg);
 }
 
-#work3 {
-    background-image: url(../materials/reportage.jpg);
+#offthegrid {
+    background-image: url(../materials/offthegrid/copertina.jpg);
 }
 
-/* #work4 {
-    background-image: url(materials/chicken.png);
-}
-
-#work5 {
-    background-image: url(materials/morte.jpg);
-}
-
-#work6 {
-    background-image: url(materials/reportage.jpg);
-} */
-
-.seeAll {
-    color: #9B5313;
-    padding: 0.5vw 1vw;
+#seeAll {
+    display: flex;
+    justify-content: right;
     background-color: #FED9B7;
+    padding: 0.7vw 1.5vw;
+    margin: 0 1vw 0.7vw 87.7vw;
     border-radius: 50vw;
-    font-weight: 500;
-    font-size: 1vw;
-    margin-right: 1vw;
-    margin-top: 1vh;
+    font-size: 1.1vw;
 }
 
-.seeAll:hover {
+#seeAll:hover {
     color: #FED9B7;
     background-color: #9B5313;
     cursor: pointer;
-}
-
-@media only screen and (max-width: 768px) {
-    #workContainer {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        height: 70vh;
-        flex-direction: column;
-    }
-
-    .workObject {
-        margin: 1%;
-        height: 20vh;
-        width: 95%;
-        border-radius: 2vw;
-        transition: 0.2s;
-        border: solid 0.2% #FED9B7;
-    }
-
-    .workText {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 2vw 3vw;
-        font-weight: 500;
-        font-size: 5vw;
-        border-radius: 0 0 1vw 1vw;
-        color: #FED9B7;
-    }
-
-    .category {
-        font-weight: 400;
-        font-size: 3vw;
-    }
-
-    #work1 {
-        background-image: url(../materials/chicken.png);
-    }
-
-    #work2 {
-        background-image: url(../materials/morte.jpg);
-    }
-
-    #work3 {
-        background-image: url(../materials/reportage.jpg);
-    }
-
-    .seeAll {
-        color: #9B5313;
-        padding: 2vw 3vw;
-        background-color: #FED9B7;
-        border-radius: 50vw;
-        font-weight: 400;
-        font-size: 4vw;
-        align-self: flex-end;
-        margin: 1vh 2vw 0 0;
-    }
 }
 
 /* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -395,13 +250,6 @@
     }
 }
 
-.noTransitions {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-}
-
 @media only screen and (max-width: 768px) {
 
     #pImageDiv {
@@ -416,6 +264,4 @@
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    
-}
+@media only screen and (min-width: 1200px) {}
