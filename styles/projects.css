@@ -330,7 +330,7 @@ body {
 /* Aletheia Photo Mosaic ----------------------------------------------------------------------------------------------------------------------------- */
 
 #aletheiaCover {
-    width: 50%;
+    width: 40%;
     height: 40vw;
     background-image: url(../materials/aletheia/copertina.jpg);
 }
@@ -351,15 +351,14 @@ body {
 
 #aletheia4 {
     width: 50%;
-    height: 35vw;
+    height: 40vw;
     background-image: url(../materials/aletheia/aletheia3.jpg);
 }
 
 #aletheia3 {
-    width: 20%;
-    height: 35vw;
-    background-image: url(../materials/aletheia/aletheia4.png);
-    background-position: left;
+    width: 30%;
+    height: 40vw;
+    background-image: url(../materials/aletheia/aletheia4.jpg);
 }
 
 #aletheiaSubcontainer {
@@ -396,9 +395,7 @@ body {
 
     #aletheia3 {
         width: 100%;
-        height: 50vw;
-        background-size: contain;
-        background-position: center;
+        height: 70vw;
     }
 
     #aletheia4 {
@@ -920,7 +917,7 @@ body {
 #reportage5 {
     width: 50%;
     height: 42vw;
-    background-image: url(../materials/reportage/reportage5.png);
+    background-image: url(../materials/reportage/reportage5.jpg);
 }
 
 @media only screen and (max-width: 768px) {
