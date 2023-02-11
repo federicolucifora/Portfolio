@@ -3,15 +3,6 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    width: 100%;
-    height: 94vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
 /* Big title -------------------------------------------------------------------------------------------------------------------------*/
 
 #pageTitle {
@@ -179,25 +170,300 @@ body {
     background-image: url(../materials/mail.png);
 }
 
-@media only screen and (max-width: 768px) {
-    #contactsContainer {
-        width: 100%;
-        height: 10vh;
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-        margin-top: 1vh;
-    }
+@media only screen and (max-width: 600px) {
+    
+/* Big title -------------------------------------------------------------------------------------------------------------------------*/
 
-    .contactsObject {
-        width: 8vw;
-        height: 8vw;
-        background-size: 8vw;
-        padding: 5vw;
-        margin: 0 2vw;
-        border-radius: 30%;
-    }
+#pageTitle {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20.2vw;
+    height: 100vh;
+}
+
+/* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
+
+.normalText {
+    font-weight: 500;
+    font-size: 2vw;
+}
+
+#presentation {
+    display: block;
+    margin: 12vh 10vw 55vh 45vw;
+}
+
+/* Skills ------------------------------------------------------------------------------------------------------------------------------ */
+
+#skills {
+    margin: 0vh 58.5vw 10vh 10vw;
+}
+
+#modeling {
+    padding: 2.8vw 4vw;
+    border-radius: 3vw;
+    margin: 0 3vw 20vw 10vw;
 
 }
+
+#levelDesign {
+    background-image: url(../materials/shape_skill.svg);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 5.9vw 3.5vw 5.5vw 3.8vw;
+
+}
+
+#development {
+    padding: 2.2vw 3.8vw;
+    border-radius: 5vw;
+}
+
+.skillsText {
+    font-weight: 500;
+    font-size: 1.3vw;
+    margin-right: 3vw;
+    display: inline-block;
+}
+
+/* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+#workContainer {
+    padding: 0 1vw;
+    margin-bottom: 1.2vw;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1vw;
+}
+
+.workObject {
+    height: 28vw;
+    width: 30%;
+    flex-grow: 1;
+    border-radius: 1vw;
+    transition: 0.2s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: solid 0.2vw #FFC5B3;
+}
+
+.workObject:hover {
+    transform: scale(1.03);
+}
+
+.workText {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.8vw 1vw;
+    font-weight: 500;
+    font-size: 1.5vw;
+    border-radius: 0 0 0.85vw 0.85vw;
+    color: #FFC5B3;
+}
+
+.category {
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+#hellsChicken {
+    background-image: url(../materials/hells_chicken/copertina.jpg)
+}
+
+#mkwii {
+    background-image: url(../materials/mkwii/copertina.jpg);
+}
+
+#offthegrid {
+    background-image: url(../materials/offthegrid/copertina.jpg);
+}
+
+#seeAll {
+    display: flex;
+    justify-content: right;
+    background-color: #FED9B7;
+    padding: 0.7vw 1.5vw;
+    margin: 0 1vw 0.7vw 87.7vw;
+    border-radius: 50vw;
+    font-size: 1.1vw;
+}
+
+#seeAll:hover {
+    color: #FED9B7;
+    background-color: #9B5313;
+    cursor: pointer;
+}
+
+/* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#contactsContainer {
+    width: 100%;
+    height: 12vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5vh;
+    border-top: solid 1px #FED9B7;
+}
+
+.contactsObject {
+    width: 3vw;
+    height: 3vw;
+    background-repeat: no-repeat;
+    background-size: 3vw;
+    background-position: center;
+    padding: 2vw;
+    margin: 0 1vw;
+    border-radius: 30%;
+}
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    
+    /* Big title -------------------------------------------------------------------------------------------------------------------------*/
+    
+    #pageTitle {
+        margin: 0;
+        width: 100%;
+        font-size: 20.2vw;
+        height: 35vh;
+    }
+    
+    /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
+    
+    .normalText {
+        font-size: 2.2vw;
+    }
+    
+    #presentation {
+        margin: 4vw 15vw 19vw 37vw;
+    }
+    
+    /* Skills ------------------------------------------------------------------------------------------------------------------------------ */
+    
+    #skills {
+        margin: 0 58.5vw 7vw 7vw;
+    }
+    
+    #modeling {
+        padding: 3.5vw 5vw;
+        border-radius: 4vw;
+        margin: 0 9vw 15vw 7vw;
+    
+    }
+    
+    #levelDesign {
+        background-image: url(../materials/shape_skill.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        padding: 7vw 3.5vw 7vw 3.8vw;
+    
+    }
+    
+    #development {
+        padding: 3vw 4.5vw;
+        border-radius: 8vw;
+        margin: 0;
+    }
+    
+    .skillsText {
+        font-weight: 500;
+        font-size: 2vw;
+        margin-right: 9vw;
+        display: inline-block;
+    }
+    
+    /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    #workContainer {
+        padding: 0 1vw;
+        margin-bottom: 1.2vw;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1vw;
+    }
+    
+    .workObject {
+        height: 28vw;
+        width: 30%;
+        flex-grow: 1;
+        border-radius: 1vw;
+        transition: 0.2s;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        border: solid 0.2vw #FFC5B3;
+    }
+    
+    .workObject:hover {
+        transform: scale(1.03);
+    }
+    
+    .workText {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0.8vw 1vw;
+        font-weight: 500;
+        font-size: 1.6vw;
+        border-radius: 0 0 0.85vw 0.85vw;
+        color: #FFC5B3;
+    }
+    
+    .category {
+        font-weight: 400;
+        font-size: 1vw;
+    }
+    
+    #seeAll {
+        display: flex;
+        justify-content: right;
+        background-color: #FED9B7;
+        padding: 0.7vw 1.5vw;
+        margin: 0 1vw 0.7vw 86.7vw;
+        border-radius: 50vw;
+        font-size: 1.3vw;
+    }
+    
+    #seeAll:hover {
+        color: #FED9B7;
+        background-color: #9B5313;
+        cursor: pointer;
+    }
+    
+    /* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
+    
+    #contactsContainer {
+        width: 100%;
+        height: 8vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5vh;
+        border-top: solid 1px #FED9B7;
+    }
+    
+    .contactsObject {
+        width: 3vw;
+        height: 3vw;
+        background-repeat: no-repeat;
+        background-size: 3vw;
+        background-position: center;
+        padding: 2vw;
+        margin: 0 1vw;
+        border-radius: 30%;
+    }
+    
+    }
 
 /* Moving image ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -250,7 +516,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 
     #pImageDiv {
         top: 28.5vh;
@@ -264,4 +530,22 @@ body {
     }
 }
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 60px) and (max-width: 992px){
+
+    #pImageDiv {
+        top: 30.5vh;
+        left: 5vw;
+    }
+
+    .normalImage {
+        width: 26vw;
+        height: 26vw;
+        transition-timing-function: linear;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #pImageDiv {
+        animation: none;
+    }
+}
