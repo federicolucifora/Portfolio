@@ -33,9 +33,12 @@ function setup() {
 }
 
 function draw() {
-    if (document.documentElement.scrollTop > 0 && m == null) {
-        navbar.style("border-color", titleColor);
-    } else { navbar.style("border-color", "#FFFCEE") };
+    if (document.documentElement.scrollTop > 0) {
+        if (m == null) {
+            navbar.style("border-color", titleColor);
+        } else {navbar.style("border-color", "#FFC5B3") }
+        
+    } else {navbar.style("border-color", "#FFFCEE") };
 }
 
 function hideMenu() {

@@ -70,7 +70,7 @@ function setup() {
 function draw() {
 
     if (document.documentElement.scrollTop > 0) {
-        navbar.style("border-color", "#FFC5B3");
+        navbar.style("border-color", "#FED9B7");
     } else { navbar.style("border-color", "#FFFCEE") };
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

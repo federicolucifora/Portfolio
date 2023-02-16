@@ -24,6 +24,20 @@ body {
     color: #FFC5B3;
 }
 
+.projectTitle img {
+    margin-left: 2vw;
+    width: 3.5vw;
+    transform: translateY(5%);
+    transition: 0.2s;
+}
+
+.projectTitle img:hover {
+    transform-origin: bottom left;
+    transform: translateY(5%);
+    transform: scale(1.05);
+    
+}
+
 .projectSubtitle {
     font-weight: 500;
     font-size: 1.4vw;
