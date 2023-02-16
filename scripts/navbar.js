@@ -4,6 +4,7 @@ let myName;
 let closeButton;
 let titleColor;
 let navbar;
+let m;
 
 function preload() { }
 
@@ -19,18 +20,20 @@ function setup() {
     itemsContainer.mouseClicked(showMenu);
     navbarItems = selectAll(".navbarItem");
     myName = select("#myName");
-    let m = match(url, "work/");
+    m = match(url, "work/");
     print(m);
     if (m == null) {
         titleColor = select("#pageTitle").style("color");
+    } else {
+        navbar.style("border-color", "#FFC5B3")
     }
-    
-    
+
+
 
 }
 
 function draw() {
-    if (document.documentElement.scrollTop > 0) {
+    if (document.documentElement.scrollTop > 0 && m == null) {
         navbar.style("border-color", titleColor);
     } else { navbar.style("border-color", "#FFFCEE") };
 }

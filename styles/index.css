@@ -43,6 +43,7 @@ body {
 #levelDesign {
     background-image: url(../materials/shape_skill.svg);
     background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     padding: 5.9vw 3.5vw 5.5vw 3.8vw;
 
@@ -89,7 +90,7 @@ body {
 }
 
 .workText {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 0.8vw 1vw;
     font-weight: 500;
     font-size: 1.5vw;
@@ -116,6 +117,8 @@ body {
 
 #seeAll {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: right;
     background-color: #FED9B7;
     padding: 0.7vw 1.5vw;
@@ -134,7 +137,6 @@ body {
 
 #contactsContainer {
     width: 100%;
-    height: 12vh;
     padding-top: 6vh;
     padding-bottom: 6vh;
     display: flex;
@@ -175,137 +177,102 @@ body {
 /* Big title -------------------------------------------------------------------------------------------------------------------------*/
 
 #pageTitle {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20.2vw;
-    height: 100vh;
+    font-size: 20vw;
+    height: 50vw;
+    margin-top: 5vw;
 }
 
 /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
 
 .normalText {
-    font-weight: 500;
-    font-size: 2vw;
+    font-size: 4.5vw;
 }
 
 #presentation {
-    display: block;
-    margin: 12vh 10vw 55vh 45vw;
+    margin: 0vw 7vw 20vw 37vw;
 }
 
 /* Skills ------------------------------------------------------------------------------------------------------------------------------ */
 
 #skills {
-    margin: 0vh 58.5vw 10vh 10vw;
+    margin: 0 20vw 10vw 6vw;
 }
 
 #modeling {
-    padding: 2.8vw 4vw;
-    border-radius: 3vw;
-    margin: 0 3vw 20vw 10vw;
-
+    padding: 6vw 7.5vw;
+    border-radius: 7vw;
+    margin: 0 auto;
+    margin-bottom: 7vw;
 }
 
 #levelDesign {
     background-image: url(../materials/shape_skill.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     text-align: center;
-    padding: 5.9vw 3.5vw 5.5vw 3.8vw;
-
+    padding: 13vw 10vw;
+    margin: 0 auto;
+    margin-bottom: 7vw;
 }
 
 #development {
-    padding: 2.2vw 3.8vw;
-    border-radius: 5vw;
+    padding: 4vw 7vw;
+    border-radius: 50vw;
+    margin: 0 auto;
+    margin-bottom: 15vw;
 }
 
 .skillsText {
     font-weight: 500;
-    font-size: 1.3vw;
-    margin-right: 3vw;
-    display: inline-block;
+    font-size: 4.5vw;
+    display: block;
+    width: fit-content;
+    
 }
 
 /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 #workContainer {
-    padding: 0 1vw;
-    margin-bottom: 1.2vw;
+    padding: 0 5vw;
+    margin-bottom: 5vw;
     display: flex;
-    flex-flow: row wrap;
-    gap: 1vw;
+    flex-flow: column wrap;
+    gap: 2vw;
 }
 
 .workObject {
-    height: 28vw;
-    width: 30%;
-    flex-grow: 1;
-    border-radius: 1vw;
-    transition: 0.2s;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border: solid 0.2vw #FFC5B3;
+    height: 50vw;
+    width: 100%;
+    border-radius: 3vw;
+    border: solid 0.5vw #FED9B7;
 }
 
 .workObject:hover {
-    transform: scale(1.03);
+    transform: scale(1);
 }
 
 .workText {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.8vw 1vw;
-    font-weight: 500;
-    font-size: 1.5vw;
-    border-radius: 0 0 0.85vw 0.85vw;
-    color: #FFC5B3;
+    padding: 2vw 3vw;
+    font-size: 4.5vw;
+    border-radius: 0 0 2.6vw 2.6vw;
+    color: #FED9B7;
 }
 
 .category {
-    font-weight: 400;
-    font-size: 1vw;
-}
-
-#hellsChicken {
-    background-image: url(../materials/hells_chicken/copertina.jpg)
-}
-
-#mkwii {
-    background-image: url(../materials/mkwii/copertina.jpg);
-}
-
-#offthegrid {
-    background-image: url(../materials/offthegrid/copertina.jpg);
+    font-size: 3vw;
 }
 
 #seeAll {
-    display: flex;
-    justify-content: right;
-    background-color: #FED9B7;
-    padding: 0.7vw 1.5vw;
-    margin: 0 1vw 0.7vw 87.7vw;
+    padding: 2vw 3vw;
+    margin: 0 4.5vw 2vw 68vw;
     border-radius: 50vw;
-    font-size: 1.1vw;
-}
-
-#seeAll:hover {
-    color: #FED9B7;
-    background-color: #9B5313;
-    cursor: pointer;
+    font-size: 3vw;
 }
 
 /* Contacts ---------------------------------------------------------------------------------------------------------------------------------------------- */
 
 #contactsContainer {
     width: 100%;
-    height: 12vh;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
+    padding: 5vw 0;
     display: flex;
     justify-content: center;
     margin-top: 1.5vh;
@@ -313,13 +280,13 @@ body {
 }
 
 .contactsObject {
-    width: 3vw;
-    height: 3vw;
+    width: 8vw;
+    height: 8vw;
     background-repeat: no-repeat;
-    background-size: 3vw;
+    background-size: 8vw;
     background-position: center;
-    padding: 2vw;
-    margin: 0 1vw;
+    padding: 4vw;
+    margin: 0 1.5vw;
     border-radius: 30%;
 }
 
@@ -330,10 +297,7 @@ body {
     /* Big title -------------------------------------------------------------------------------------------------------------------------*/
     
     #pageTitle {
-        margin: 0;
-        width: 100%;
-        font-size: 20.2vw;
-        height: 35vh;
+        height: 50vw;
     }
     
     /* Normal text -----------------------------------------------------------------------------------------------------------------------------*/
@@ -375,62 +339,36 @@ body {
     }
     
     .skillsText {
-        font-weight: 500;
         font-size: 2vw;
         margin-right: 9vw;
-        display: inline-block;
     }
     
     /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
     #workContainer {
-        padding: 0 1vw;
+        padding: 0 1.5vw;
         margin-bottom: 1.2vw;
-        display: flex;
-        flex-flow: row wrap;
-        gap: 1vw;
+        gap: 1.5vw;
     }
     
     .workObject {
-        height: 28vw;
-        width: 30%;
-        flex-grow: 1;
-        border-radius: 1vw;
-        transition: 0.2s;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        border: solid 0.2vw #FFC5B3;
-    }
-    
-    .workObject:hover {
-        transform: scale(1.03);
+        height: 30vw;
+        border-radius: 1.3vw;
     }
     
     .workText {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 0.8vw 1vw;
-        font-weight: 500;
+        padding: 1vw 1.2vw;
         font-size: 1.6vw;
-        border-radius: 0 0 0.85vw 0.85vw;
-        color: #FFC5B3;
+        border-radius: 0 0 1.1vw 1.1vw;
     }
     
     .category {
-        font-weight: 400;
-        font-size: 1vw;
+        font-size: 1.04vw;
     }
     
     #seeAll {
-        display: flex;
-        justify-content: right;
-        background-color: #FED9B7;
-        padding: 0.7vw 1.5vw;
-        margin: 0 1vw 0.7vw 86.7vw;
-        border-radius: 50vw;
-        font-size: 1.3vw;
+        padding: 0.85vw 1.5vw;
+        margin: 0 1.5vw 1vw 86vw;
+        font-size: 1.4vw;
     }
     
     #seeAll:hover {
@@ -507,7 +445,6 @@ body {
 .imageTransparent {
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 0.5s;
 }
 
 @keyframes rotateMask {
@@ -519,7 +456,7 @@ body {
 @media only screen and (max-width: 600px) {
 
     #pImageDiv {
-        top: 28.5vh;
+        top: 52.5vw;
         left: 5vw;
     }
 
@@ -530,7 +467,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 60px) and (max-width: 992px){
+@media only screen and (min-width: 601px) and (max-width: 992px){
 
     #pImageDiv {
         top: 30.5vh;

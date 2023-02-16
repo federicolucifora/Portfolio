@@ -202,3 +202,15 @@ body {
         animation: rotateMask 20s linear infinite;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    #pImageDiv {
+        animation: none;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #pImageDiv {
+        animation: none;
+    }
+}

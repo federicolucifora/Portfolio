@@ -1,5 +1,6 @@
 let pImageDiv;
-let insideImage = [];
+let me1;
+let me2;
 let scrollPoint = 0;
 let scrollBound1;
 let scrollBound2;
@@ -8,15 +9,9 @@ let pImagePositions;
 let xBounces = [];
 let yBounces = [];
 let transitionDuration = [];
-let imageInterval;
 let noRepeat = false;
-let noRepeat2 = false;
 let counter = 0;
 let hasScrolled = false;
-let workObjects;
-let translationAmount = 0;
-let body;
-let amountScrolled;
 
 let profileMargin;
 let currentPos = [];
@@ -42,6 +37,8 @@ function setup() {
     vw = windowWidth / 100;
     vh = windowHeight / 100;
 
+    me1 = select("#me1");
+    me2 = select("#me2");
     navbar = select("#navbar");
     closeButton = select("#closeButton");
     closeButton.mouseClicked(hideMenu);
@@ -65,14 +62,9 @@ function setup() {
         pImageDiv.position(xBounces[0], yBounces[0]);
     }
 
-    workObjects = selectAll(".workObject");
-
     scrollBound1 = document.getElementById("presentation").getBoundingClientRect().top + window.pageYOffset - windowHeight;
     scrollBound2 = document.getElementById("skills").getBoundingClientRect().top + window.pageYOffset - windowHeight / 3 * 2;
     scrollBound3 = document.getElementById("workContainer").getBoundingClientRect().top + window.pageYOffset - windowHeight / 2;
-    scrollBound3position = document.getElementById("workContainer").getBoundingClientRect().top + window.pageYOffset - 18 * vh;
-
-    body = select("body");
 }
 
 function draw() {
@@ -98,16 +90,10 @@ function setProfileImage() {
     profileMargin = [-0.2 * vw, windowWidth - 14.8 * vw, 3.8 * vw, windowHeight - 14.8 * vw];
 
     pImageDiv = select("#pImageDiv");
-    insideImage = selectAll("#pImageDiv img");
 }
 
 function calculatePImagePositions() {
     pImagePositions = [10 * vw, 92 * vh, 72 * vw, 191 * vh];
-}
-
-function mouseWheel(event) {
-    amountScrolled = event.deltaY;
-
 }
 
 function calculateBallBounces() {
@@ -167,6 +153,8 @@ function moveProfileImage() {
         pImageDiv.position(5 * vw, 28.5 * vh);
     } else if (scrollPoint == 0) {
         if (noRepeat == false) {
+            me2.addClass("imageTransparent");
+            me1.removeClass("imageTransparent");
             pImageDiv.removeClass("imageSize1");
             if (hasScrolled == false) {
                 imageBounce();
@@ -178,7 +166,8 @@ function moveProfileImage() {
         }
 
     } else if (scrollPoint > scrollBound1 && scrollPoint < scrollBound2) {
-        clearInterval(imageInterval);
+        me1.addClass("imageTransparent");
+        me2.removeClass("imageTransparent");
         noRepeat = false;
         hasScrolled = true;
         pImageDiv.style("transition", "0.5s linear");
@@ -199,7 +188,7 @@ function hideMenu() {
         navbarItems[i].addClass("collapsedNavbarItem");
     }
     myName.removeClass("collapsedNavbarItem");
-    itemsContainer.style("margin-right","2vw");
+    itemsContainer.style("margin-right", "2vw");
     closeButton.removeClass("visibleCloseButton");
 }
 
@@ -208,8 +197,8 @@ function showMenu() {
         navbarItems[i].removeClass("collapsedNavbarItem");
     }
     myName.addClass("collapsedNavbarItem");
-    itemsContainer.style("margin-right","0vw");
-    setTimeout(function() {closeButton.addClass("visibleCloseButton")}, 200);
+    itemsContainer.style("margin-right", "0vw");
+    setTimeout(function () { closeButton.addClass("visibleCloseButton") }, 200);
 }
 
 function windowResized() {
