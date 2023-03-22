@@ -438,6 +438,21 @@ iframe {
     }
 }
 
+/* Hell's Chicken ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#dirtypiggybankCover {
+    width: 60%;
+    height: 50vw;
+    background-image: url(../materials/dirtypiggybank/copertina.png);
+}
+
+@media only screen and (max-width: 768px) {
+    #dirtypiggybankCover {
+        width: 100%;
+        height: 50vw;
+    }
+}
+
 /* Curse of the Blind Dead ----------------------------------------------------------------------------------------------------------------------------- */
 
 #backstageCover {

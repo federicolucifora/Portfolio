@@ -61,10 +61,16 @@
 
 #reportage {
     background-image: url(../materials/reportage/copertina.jpg);
+    flex-grow: 0;
+    width: 32.374%;
 }
 
 #aletheia {
     background-image: url(../materials/aletheia/copertina.jpg);
+}
+
+#dirtypiggybank {
+    background-image: url(../materials/dirtypiggybank/copertina.png);
 }
 
 #backstage {
@@ -89,35 +95,40 @@
 
 @media only screen and (max-width: 600px) {
 
-#pageTitle {
-    font-size: 20.2vw;
-    margin: 20vw 0 10vw 0;
-}
+    #pageTitle {
+        font-size: 20.2vw;
+        margin: 20vw 0 10vw 0;
+    }
 
-/* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
-#workContainer {
-    padding: 0 4vw;
-    margin-bottom: 4vw;
-    flex-flow: column;
-    gap: 2vw;
-}
+    /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    #workContainer {
+        padding: 0 4vw;
+        margin-bottom: 4vw;
+        flex-flow: column;
+        gap: 2vw;
+    }
 
-.workObject {
-    height: 50vw;
-    width: 100%;
-    border-radius: 3vw;
-    border: solid 0.4vw #FFC5B3;
-}
+    .workObject {
+        height: 50vw;
+        width: 100%;
+        border-radius: 3vw;
+        border: solid 0.4vw #FFC5B3;
+    }
 
-.workText {
-    padding: 2vw 2.5vw;
-    font-size: 4.5vw;
-    border-radius: 0 0 2.6vw 2.6vw;
-}
+    .workText {
+        padding: 2vw 2.5vw;
+        font-size: 4.5vw;
+        border-radius: 0 0 2.6vw 2.6vw;
+    }
 
-.category {
-    font-size: 3vw;
-}
+    .category {
+        font-size: 3vw;
+    }
+
+    #reportage {
+        flex-grow: 1;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
@@ -141,4 +152,3 @@
         border: solid 0.3vw #FFC5B3;
     }
 }
-
