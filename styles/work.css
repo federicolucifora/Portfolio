@@ -52,7 +52,11 @@
 }
 
 #hellsChicken {
-    background-image: url(../materials/hells_chicken/copertina.jpg)
+    background-image: url(../materials/hells_chicken/copertina.jpg);
+}
+
+#HeG {
+    background-image: url(../materials/HeG/copertina.png);
 }
 
 #deposito {
@@ -83,6 +87,8 @@
 
 #haring {
     background-image: url(../materials/haring/copertina.jpg);
+    flex-grow: 0;
+    width: 32.374%;
 }
 
 #mkwii {
@@ -126,6 +132,11 @@
     }
 
     #reportage {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    #haring {
         flex-grow: 1;
         width: 100%;
     }

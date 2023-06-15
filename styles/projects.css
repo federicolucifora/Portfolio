@@ -289,6 +289,94 @@ iframe {
     }
 }
 
+/* hansel e gretel ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#HeGTitle {
+    font-size: 3.8vw;
+}
+
+#HeGCover {
+    width: 60%;
+    height: 40vw;
+    background-image: url(../materials/HeG/copertina.png);
+}
+
+#HeG1 {
+    width: 30%;
+    height: 40vw;
+    background-image: url(../materials/HeG/HeG1.png);
+}
+
+#HeG2 {
+    width: 90%;
+    height: 50vw;
+    background-image: url(../materials/HeG/HeG2.png);
+}
+
+#HeG3 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/HeG/HeG3.png);
+}
+
+#HeG4 {
+    width: 50vw;
+    height: 30vw;
+    background-image: url(../materials/HeG/HeG4.png);
+}
+
+#HeG5 {
+    width: 40vw;
+    height: 35vw;
+    background-image: url(../materials/HeG/HeG5.png);
+}
+
+#HeG6 {
+    width: 30vw;
+    height: 35vw;
+    background-image: url(../materials/HeG/HeG6.png);
+}
+
+@media only screen and (max-width: 768px) {
+    #HeGTitle {
+        font-size: 7vw;
+    }
+
+    #HeGCover {
+        width: 100%;
+        height: 67vw;
+    }
+
+    #HeG1 {
+        width: 100%;
+        height: 67vw;
+    }
+
+    #HeG2 {
+        width: 100%;
+        height: 67vw;
+    }
+
+    #HeG3 {
+        width: 100%;
+        height: 67vw;
+    }
+
+    #HeG4 {
+        width: 100%;
+        height: 67vw;
+    }
+
+    #HeG5 {
+        width: 100%;
+        height: 67vw;
+    }
+
+    #HeG6 {
+        width: 100%;
+        height: 67vw;
+    }
+}
 
 /* Deposito Cinerario Italiano ----------------------------------------------------------------------------------------------------------------------------- */
 
