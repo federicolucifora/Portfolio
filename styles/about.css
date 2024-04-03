@@ -51,16 +51,29 @@ body {
 }
 
 .elementSubtitle {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     font-weight: 400;
+}
+
+.elementSubtitle a {
+    text-decoration: underline;
+}
+
+.elementSubtitle a:hover {
+    font-weight: 500;
 }
 
 #experience {
     border-bottom: solid 1px #FED9B7;
 }
 
-#education {
+#awards {
     border-bottom: solid 1px #FFC5B3;
+    margin-top: 6vw;
+}
+
+#education {
+    border-bottom: solid 1px #C3EAE4;
     margin-top: 6vw;
 }
 

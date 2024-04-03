@@ -17,11 +17,23 @@ body {
     display: block;
 }
 
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleContainer {
+    width: 65vw;
+    display: block;
+}
+
 .projectTitle {
+    width: 55vw;
     font-weight: 700;
     font-size: 4vw;
     margin-bottom: 0.5vw;
     color: #FFC5B3;
+    text-wrap: wrap;
 }
 
 .projectTitle img {
@@ -41,23 +53,12 @@ body {
 .projectSubtitle {
     font-weight: 500;
     font-size: 1.4vw;
-    margin-bottom: 3vw;
+    margin: 1vw 0 1.5vw 0;
     color: #FFC5B3;
 }
 
-.projectSubcontainer {
-    display: flex;
-}
-
-.projectText {
-    width: 55vw;
-    font-weight: 500;
-    font-size: 1.2vw;
-    margin-right: 10vw;
-    line-height: 1.8vw;
-}
-
 .collaborators {
+    padding: 1vw 0 0 4vw;
     width: 15vw;
     font-weight: 500;
     font-size: 1.2vw;
@@ -69,6 +70,19 @@ body {
     font-weight: 700;
     font-size: 2vw;
     line-height: 2vw;
+}
+
+.projectText {
+    font-weight: 500;
+    font-size: 1.2vw;
+    line-height: 1.8vw;
+}
+
+.storyBox {
+    padding: 3.8vw 4vw;
+    background-color: #FFFCEE;
+    border-radius: 2vw;
+    width: 25vw;
 }
 
 .roundedImage {
@@ -85,7 +99,7 @@ iframe {
     height: 40vw;
 }
 
-.imagesContainer {
+.storyContainer {
     display: flex;
     flex-flow: row wrap;
     gap: 1vw;
@@ -105,8 +119,16 @@ iframe {
         border-radius: 4vw;
     }
 
+    .headerContainer {
+        display: block;
+    }
+
+    .titleContainer {
+        width:100%;
+    }
+
     .projectTitle {
-        font-size: 7vw;
+        font-size: 5.7vw;
         margin-bottom: 0.5vw;
         color: #FFC5B3;
     }
@@ -123,12 +145,13 @@ iframe {
     .projectText {
         width: 100%;
         font-size: 2.9vw;
-        margin-bottom: 3vw;
         line-height: 4vw;
     }
 
     .collaborators {
         width: 100%;
+        padding: 0;
+        margin: 4vw 0 0 0;
         font-size: 2.9vw;
         line-height: 4vw;
     }
@@ -155,48 +178,32 @@ iframe {
         gap: 4vw;
         padding: 4vw 4vw 4vw 4vw;
     }
+
+    .storyBox {
+        width: 100%;
+        border-radius: 4vw;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
+
     .projectContainer {
         margin: 12vw 4vw 0vw 4vw;
     }
 
-    .projectTitle {
-        font-size: 6vw;
-        margin-bottom: 0.5vw;
-    }
-
-    .projectSubtitle {
-        font-weight: 500;
-        font-size: 2vw;
-        margin-bottom: 3vw;
-        color: #FFC5B3;
-    }
-
-    .projectSubcontainer {
-        display: flex;
-    }
-
-    .projectText {
+    .titleContainer {
         width: 60vw;
-        font-size: 1.8vw;
-        margin-right: 5vw;
-        line-height: 2.5vw;
     }
 
-    .collaborators {
-        font-size: 1.8vw;
-        line-height: 2.8vw;
-    }
-
-    .collaboratorsTitle {
-        font-size: 2.5vw;
+    .projectTitle {
+        width: 55vw;
+        font-size: 4vw;
+        margin-bottom: 0.5vw;
     }
 
     iframe {
         width: 100%;
-        height: 52.25vw;
+        height: 52.5vw;
     }
 }
 
@@ -212,47 +219,52 @@ iframe {
 
 #hellsChickenCover {
     width: 60%;
-    height: 40vw;
+    height: 30vw;
     background-image: url(../materials/hells_chicken/copertina.jpg);
 }
 
 #hellsChicken1 {
-    width: 30%;
-    height: 40vw;
+    width: 40%;
+    height: 25vw;
     background-image: url(../materials/hells_chicken/screen1.jpg);
 }
 
 #hellsChicken2 {
-    width: 90%;
-    height: 35vw;
+    width: 40%;
+    height: 25vw;
     background-image: url(../materials/hells_chicken/screen2.jpg);
 }
 
 #hellsChicken3 {
     width: 40%;
-    height: 25vw;
+    height: 32vw;
     background-image: url(../materials/hells_chicken/screen3.jpg);
 }
 
 #hellsChicken4 {
-    width: 50vw;
+    width: 25%;
     height: 25vw;
     background-image: url(../materials/hells_chicken/screen4.jpg);
 }
 
 #hellsChicken5 {
-    width: 40vw;
-    height: 30vw;
+    width: 25%;
+    height: 25vw;
     background-image: url(../materials/hells_chicken/screen5.jpg);
 }
 
 #hellsChicken6 {
-    width: 30vw;
-    height: 30vw;
+    width: 25%;
+    height: 25vw;
     background-image: url(../materials/hells_chicken/screen6.jpg);
 }
 
 @media only screen and (max-width: 768px) {
+
+    .storyBox {
+        width: 100%;
+    }
+
     #hellsChickenCover {
         width: 100%;
         height: 50vw;
@@ -289,160 +301,129 @@ iframe {
     }
 }
 
-/* hansel e gretel ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
-
-#HeGTitle {
-    font-size: 3.8vw;
-}
-
-#HeGCover {
-    width: 60%;
-    height: 40vw;
-    background-image: url(../materials/HeG/copertina.png);
-}
-
-#HeG1 {
-    width: 30%;
-    height: 40vw;
-    background-image: url(../materials/HeG/HeG1.png);
-}
-
-#HeG2 {
-    width: 90%;
-    height: 50vw;
-    background-image: url(../materials/HeG/HeG2.png);
-}
-
-#HeG3 {
-    width: 40%;
-    height: 30vw;
-    background-image: url(../materials/HeG/HeG3.png);
-}
-
-#HeG4 {
-    width: 50vw;
-    height: 30vw;
-    background-image: url(../materials/HeG/HeG4.png);
-}
-
-#HeG5 {
+/* irreducible ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+#irreducibleVideo {
     width: 40vw;
     height: 35vw;
-    background-image: url(../materials/HeG/HeG5.png);
 }
 
-#HeG6 {
-    width: 30vw;
+#irreducibleCover {
+    width: 20%;
     height: 35vw;
-    background-image: url(../materials/HeG/HeG6.png);
+    background-image: url(../materials/irreducible/copertina.png);
+}
+
+#irreducible1 {
+    width: 20%;
+    height: 35vw;
+    background-image: url(../materials/irreducible/irreducible1.png);
+}
+
+#irreducible2 {
+    width: 20%;
+    height: 35vw;
+    background-image: url(../materials/irreducible/irreducible4.png);
+}
+
+#irreducible3 {
+    width: 20vw;
+    height: 35vw;
+    background-image: url(../materials/irreducible/irreducible3.png);
 }
 
 @media only screen and (max-width: 768px) {
-    #HeGTitle {
-        font-size: 7vw;
+
+    #irreducibleVideo {
+        width: 40vw;
+        height: 52vw;
     }
 
-    #HeGCover {
+    #irreducibleCover {
         width: 100%;
-        height: 67vw;
+        height: 140vw;
     }
 
-    #HeG1 {
+    #irreducible1 {
         width: 100%;
-        height: 67vw;
+        height: 140vw;
     }
 
-    #HeG2 {
+    #irreducible2 {
         width: 100%;
-        height: 67vw;
+        height: 140vw;
     }
 
-    #HeG3 {
+    #irreducible3 {
         width: 100%;
-        height: 67vw;
-    }
-
-    #HeG4 {
-        width: 100%;
-        height: 67vw;
-    }
-
-    #HeG5 {
-        width: 100%;
-        height: 67vw;
-    }
-
-    #HeG6 {
-        width: 100%;
-        height: 67vw;
+        height: 140vw;
     }
 }
 
-/* Deposito Cinerario Italiano ----------------------------------------------------------------------------------------------------------------------------- */
+/* Meet Museum ----------------------------------------------------------------------------------------------------------------------------- */
 
-#depositoCover {
+#meetCover {
     width: 50%;
     height: 40vw;
-    background-image: url(../materials/deposito/copertina.jpg);
+    background-image: url(../materials/meet/copertina.jpg);
 }
 
-#deposito1 {
+#meet1 {
     width: 35%;
     height: 40vw;
-    background-image: url(../materials/deposito/deposito1.jpg);
+    background-image: url(../materials/meet/meet1.jpg);
 }
 
-#deposito2 {
+#meet2 {
     width: 40%;
     height: 35vw;
-    background-image: url(../materials/deposito/deposito2.jpg);
+    background-image: url(../materials/meet/meet2.jpg);
 }
 
-#deposito3 {
+#meet3 {
     width: 50%;
     height: 35vw;
-    background-image: url(../materials/deposito/deposito3.jpg);
+    background-image: url(../materials/meet/meet3.jpg);
 }
 
-#deposito4 {
+#meet4 {
     width: 30vw;
     height: 50vw;
-    background-image: url(../materials/deposito/deposito4.jpg);
+    background-image: url(../materials/meet/meet4.jpg);
 }
 
-#deposito5 {
+#meet5 {
     width: 30vw;
     height: 50vw;
-    background-image: url(../materials/deposito/deposito5.jpg);
+    background-image: url(../materials/meet/meet5.jpg);
 }
 
 @media only screen and (max-width: 768px) {
-    #depositoCover {
+    #meetCover {
         width: 100%;
         height: 60vw;
     }
 
-    #deposito1 {
+    #meet1 {
         width: 100%;
         height: 60vw;
     }
 
-    #deposito2 {
+    #meet2 {
         width: 100%;
         height: 60vw;
     }
 
-    #deposito3 {
+    #meet3 {
         width: 100%;
         height: 60vw;
     }
 
-    #deposito4 {
+    #meet4 {
         width: 100%;
         height: 110vw;
     }
 
-    #deposito5 {
+    #meet5 {
         width: 100%;
         height: 110vw;
     }
@@ -452,8 +433,8 @@ iframe {
 /* Aletheia Photo Mosaic ----------------------------------------------------------------------------------------------------------------------------- */
 
 #aletheiaCover {
-    width: 40%;
-    height: 40vw;
+    width: 50%;
+    height: 30vw;
     background-image: url(../materials/aletheia/copertina.jpg);
 }
 
@@ -473,7 +454,7 @@ iframe {
 
 #aletheia4 {
     width: 50%;
-    height: 40vw;
+    height: 35vw;
     background-image: url(../materials/aletheia/aletheia3.jpg);
 }
 
@@ -527,15 +508,46 @@ iframe {
 }
 
 /* Hell's Chicken ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+#dirtyVideo {
+    width: 35%;
+    height: 35vw;
+}
+
+#dirty1 {
+    width: 40%;
+    height: 25vw;
+    background-image: url(../materials/dirtypiggybank/dirty1.png);
+}
 
 #dirtypiggybankCover {
-    width: 60%;
-    height: 50vw;
+    width: 40%;
+    height: 25vw;
     background-image: url(../materials/dirtypiggybank/copertina.png);
+}
+
+#dirty2 {
+    width: 30vw;
+    height: 30vw;
+    background-image: url(../materials/dirtypiggybank/dirty2.png);
 }
 
 @media only screen and (max-width: 768px) {
     #dirtypiggybankCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #dirtyVideo {
+        width: 100%;
+        height: 50vw;
+    }
+    
+    #dirty1 {
+        width: 100%;
+        height: 50vw;
+    }
+    
+    #dirty2 {
         width: 100%;
         height: 50vw;
     }
@@ -726,13 +738,13 @@ iframe {
 }
 
 #haring1 {
-    width: 30%;
+    width: 25%;
     height: 30vw;
     background-image: url(../materials/haring/haring1.jpg);
 }
 
 #haring2 {
-    width: 40%;
+    width: 25%;
     height: 30vw;
     background-image: url(../materials/haring/haring2.jpg);
 
@@ -751,13 +763,13 @@ iframe {
 }
 
 #haring5 {
-    width: 30%;
+    width: 45%;
     height: 30vw;
     background-image: url(../materials/haring/haring5.jpg);
 }
 
 #haring6 {
-    width: 40%;
+    width: 45%;
     height: 30vw;
     background-image: url(../materials/haring/haring6.jpg);
 }
@@ -1035,8 +1047,8 @@ iframe {
 }
 
 #offthegrid2 {
-    width: 100%;
-    height: 45vw;
+    width: 40%;
+    height: 28vw;
     background-image: url(../materials/offthegrid/offthegrid2.jpg);
 
 }
@@ -1055,13 +1067,7 @@ iframe {
 
 #offthegrid5 {
     width: 40%;
-    height: 25vw;
-    background-image: url(../materials/offthegrid/offthegrid5.jpg);
-}
-
-#offthegrid6 {
-    width: 40%;
-    height: 25vw;
+    height: 35vw;
     background-image: url(../materials/offthegrid/offthegrid6.jpg);
 }
 
@@ -1092,11 +1098,6 @@ iframe {
     }
 
     #offthegrid5 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #offthegrid6 {
         width: 100%;
         height: 50vw;
     }
