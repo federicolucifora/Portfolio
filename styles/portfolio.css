@@ -49,6 +49,12 @@
     transform: scale(1.03);
 }
 
+.emptyObject {
+    height: 28vw;
+    width: 30%;
+    flex-grow: 1;
+}
+
 .workText {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 0.8vw 1vw;
@@ -73,13 +79,11 @@
 }
 
 #meet {
-    background-image: url(../materials/meet/copertina.jpg);
+    background-image: url(../materials/meet/meet1.png);
 }
 
 #reportage {
     background-image: url(../materials/reportage/copertina.jpg);
-    flex-grow: 0;
-    width: 32.374%;
 }
 
 #aletheia {
@@ -100,8 +104,6 @@
 
 #haring {
     background-image: url(../materials/haring/copertina.jpg);
-    flex-grow: 0;
-    width: 32.374%;
 }
 
 #mkwii {
@@ -110,6 +112,10 @@
 
 #offthegrid {
     background-image: url(../materials/offthegrid/copertina.jpg);
+}
+
+.emptyObject {
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -148,14 +154,8 @@
         font-size: 3vw;
     }
 
-    #reportage {
-        flex-grow: 1;
-        width: 100%;
-    }
-
-    #haring {
-        flex-grow: 1;
-        width: 100%;
+    .emptyObject {
+        height: 0;
     }
 }
 

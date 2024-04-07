@@ -30,7 +30,7 @@ body {
 /* Skills ------------------------------------------------------------------------------------------------------------------------------ */
 
 #skills {
-    margin: 0vh 58.5vw 10vh 10vw;
+    margin: 0vh 0 10vh 10vw;
 }
 
 #modeling {
@@ -103,16 +103,17 @@ body {
     font-size: 1vw;
 }
 
-#mkwii {
-    background-image: url(../materials/mkwii/mkwii12.jpg)
+#irreducible {
+    background-image: url(../materials/irreducible/copertina.png);
+    background-position: 0 70%;
 }
 
-#dirtypiggybank {
-    background-image: url(../materials/dirtypiggybank/copertina.png);
+#meet {
+    background-image: url(../materials/meet/meet1.png);
 }
 
-#hellsChicken {
-    background-image: url(../materials/hells_chicken/copertina.jpg);
+#offthegrid {
+    background-image: url(../materials/offthegrid/copertina.jpg);
 }
 
 #seeAll {
@@ -313,7 +314,7 @@ body {
     /* Skills ------------------------------------------------------------------------------------------------------------------------------ */
     
     #skills {
-        margin: 0 58.5vw 7vw 7vw;
+        margin: 0 0 7vw 7vw;
     }
     
     #modeling {
@@ -367,7 +368,7 @@ body {
     
     #seeAll {
         padding: 0.85vw 1.5vw;
-        margin: 0 1.5vw 1vw 86vw;
+        margin: 0 1.5vw 1vw 85vw;
         font-size: 1.4vw;
     }
     
