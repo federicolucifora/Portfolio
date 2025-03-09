@@ -103,17 +103,16 @@ body {
     font-size: 1vw;
 }
 
-#irreducible {
-    background-image: url(../materials/irreducible/copertina.png);
-    background-position: 0 70%;
+#dolce_vita {
+    background-image: url(../materials/dolce_vita/cover.jpg);
 }
 
-#meet {
-    background-image: url(../materials/meet/meet1.png);
+#mkwii {
+    background-image: url(../materials/mkwii/mkwii12.jpg);
 }
 
-#offthegrid {
-    background-image: url(../materials/offthegrid/copertina.jpg);
+#ferrari {
+    background-image: url(../materials/ferrari/cover.jpg);
 }
 
 #seeAll {

@@ -15,20 +15,26 @@ html {
 
 .projectContainer {
     margin: 8vw 4vw 0vw 4vw;
-    padding: 4vw;
     background-color: #FFFCEE;
     border-radius: 2vw;
     display: block;
 }
 
+.cover {
+    height: 30vw;
+    border-radius: 2vw 2vw 0vw 0vw;
+    background-position: center;
+    background-size: cover;
+}
+
 .headerContainer {
     display: flex;
     justify-content: space-between;
+    padding: 3.3vw 4vw 4vw 4vw;
 }
 
 .titleContainer {
     display: block;
-    flex-grow: 1;
 }
 
 .projectTitle {
@@ -53,14 +59,7 @@ html {
 
 }
 
-.projectSubtitle {
-    font-weight: 500;
-    font-size: 1.4vw;
-    margin: 1vw 0 1.5vw 0;
-    color: #FFC5B3;
-}
-
-.collaborators {
+.responsibilities {
     padding: 1vw 0 0 4vw;
     font-weight: 500;
     font-size: 1.2vw;
@@ -68,7 +67,7 @@ html {
     flex-shrink: 3;
 }
 
-.collaboratorsTitle {
+.responsibilitiesTitle {
     color: #FFC5B3;
     font-weight: 700;
     font-size: 2vw;
@@ -79,6 +78,7 @@ html {
     font-weight: 500;
     font-size: 1.2vw;
     line-height: 1.8vw;
+    margin-top: 1.5vw;
 }
 
 .storyBox {
@@ -86,9 +86,13 @@ html {
     background-color: #FFFCEE;
     border-radius: 2vw;
     width: 25vw;
+    font-weight: 500;
+    font-size: 1.2vw;
+    line-height: 1.8vw;
 }
 
 .roundedImage {
+    background-color: #FFFCEE;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -110,15 +114,15 @@ iframe {
 }
 
 @media only screen and (min-width: 600px) {
-    .mobileCollaborators {
+    .mobileResponsibilities {
         display: none;
     }
 }
 
 @media only screen and (max-width: 600px) {
+    
     .projectContainer {
         margin: 16vw 4vw 0vw 4vw;
-        padding: 4vw;
         border-radius: 4vw;
     }
 
@@ -132,13 +136,15 @@ iframe {
 
     .projectTitle {
         font-size: 5.7vw;
-        margin-bottom: 0.5vw;
+        margin-bottom: 2vw;
         color: #FFC5B3;
     }
 
-    .projectSubtitle {
-        font-size: 2.9vw;
-        margin-bottom: 3vw;
+    .projectTitle img {
+        margin-left: 3vw;
+        width: 4vw;
+        transform: translateY(5%);
+        transition: 0.2s;
     }
 
     .projectSubcontainer {
@@ -151,7 +157,7 @@ iframe {
         line-height: 4vw;
     }
 
-    .collaborators {
+    .responsibilities {
         width: 100%;
         padding: 0;
         margin: 4vw 0 0 0;
@@ -159,12 +165,12 @@ iframe {
         line-height: 4vw;
     }
 
-    .collaboratorsTitle {
-        font-size: 4.3vw;
+    .responsibilitiesTitle {
+        font-size: 4.2vw;
         line-height: 2vw;
     }
 
-    .desktopCollaborators {
+    .desktopResponsibilities {
         display: none;
     }
 
@@ -185,10 +191,16 @@ iframe {
     .storyBox {
         width: 100%;
         border-radius: 4vw;
+        font-size: 2.9vw;
+        line-height: 4vw;
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
+
+    .titleContainer {
+        width:65%;
+    }
 
     .projectContainer {
         margin: 12vw 4vw 0vw 4vw;
@@ -203,6 +215,26 @@ iframe {
         width: 100%;
         height: 52.5vw;
     }
+
+    .projectText {
+        font-size: 1.6vw;
+        line-height: 2.6vw;
+    }
+
+    .responsibilitiesTitle {
+        font-size: 2.6vw;
+        line-height: 2vw;
+    }
+
+    .responsibilities {
+        font-size: 1.78vw;
+        line-height: 3vw;
+    }
+
+    .storyBox {
+        font-size: 1.6vw;
+        line-height: 2.6vw;
+    }
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -216,9 +248,13 @@ iframe {
 /* Hell's Chicken ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 #hellsChickenCover {
-    width: 60%;
-    height: 30vw;
     background-image: url(../materials/hells_chicken/copertina.jpg);
+    background-position: top;
+}
+
+.chickenVideo {
+    width: 40%;
+    height: 33vw;
 }
 
 #hellsChicken1 {
@@ -261,6 +297,11 @@ iframe {
 
     .storyBox {
         width: 100%;
+    }
+
+    .chickenVideo {
+        width: 100%;
+        height: 50vw;
     }
 
     #hellsChickenCover {
@@ -306,8 +347,6 @@ iframe {
 }
 
 #irreducibleCover {
-    width: 20%;
-    height: 35vw;
     background-image: url(../materials/irreducible/copertina.png);
 }
 
@@ -360,8 +399,6 @@ iframe {
 /* Meet Museum ----------------------------------------------------------------------------------------------------------------------------- */
 
 #meetCover {
-    width: 50%;
-    height: 40vw;
     background-image: url(../materials/meet/meet1.png);
 }
 
@@ -416,84 +453,6 @@ iframe {
     }
 }
 
-
-/* Aletheia Photo Mosaic ----------------------------------------------------------------------------------------------------------------------------- */
-
-#aletheiaCover {
-    width: 50%;
-    height: 30vw;
-    background-image: url(../materials/aletheia/copertina.jpg);
-}
-
-#aletheia1 {
-    width: 100%;
-    height: 50%;
-    background-image: url(../materials/aletheia/aletheia1.jpg);
-    background-position: left;
-}
-
-#aletheia2 {
-    width: 100%;
-    height: 50%;
-    background-image: url(../materials/aletheia/aletheia2.jpg);
-
-}
-
-#aletheia4 {
-    width: 50%;
-    height: 35vw;
-    background-image: url(../materials/aletheia/aletheia3.jpg);
-}
-
-#aletheia3 {
-    width: 30%;
-    height: 40vw;
-    background-image: url(../materials/aletheia/aletheia4.jpg);
-}
-
-#aletheiaSubcontainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-    width: 30vw;
-    height: 40vw;
-}
-
-@media only screen and (max-width: 768px) {
-    #aletheiaCover {
-        width: 100%;
-        height: 90vw;
-    }
-
-    #aletheiaSubcontainer {
-        display: flex;
-        flex-direction: column;
-        gap: 4vw;
-        width: 100%;
-        height: 104vw;
-    }
-
-    #aletheia1 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #aletheia2 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #aletheia3 {
-        width: 100%;
-        height: 70vw;
-    }
-
-    #aletheia4 {
-        width: 100%;
-        height: 50vw;
-    }
-}
-
 /* Hell's Chicken ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 #dirtyVideo {
     width: 35%;
@@ -501,20 +460,18 @@ iframe {
 }
 
 #dirty1 {
-    width: 40%;
-    height: 25vw;
+    width: 80%;
+    height: 45vw;
     background-image: url(../materials/dirtypiggybank/dirty1.png);
 }
 
 #dirtypiggybankCover {
-    width: 40%;
-    height: 25vw;
     background-image: url(../materials/dirtypiggybank/copertina.png);
 }
 
 #dirty2 {
-    width: 30vw;
-    height: 30vw;
+    width: 30%;
+    height: 35vw;
     background-image: url(../materials/dirtypiggybank/dirty2.png);
 }
 
@@ -542,104 +499,103 @@ iframe {
 
 /* Curse of the Blind Dead ----------------------------------------------------------------------------------------------------------------------------- */
 
-#backstageCover {
-    width: 40%;
-    height: 35vw;
-    background-image: url(../materials/backstage/copertina.jpg);
+#ferrariCover {
+    background-image: url(../materials/ferrari/cover.jpg);
+    background-position-y: 35%;
 }
 
-#backstage1 {
+#ferrari1 {
     width: 50%;
     height: 35vw;
-    background-image: url(../materials/backstage/backstage1.jpg);
+    background-image: url(../materials/ferrari/ferrari_1.png);
 }
 
-#backstage2 {
-    width: 50%;
-    height: 35vw;
-    background-image: url(../materials/backstage/backstage2.jpg);
-
-}
-
-#backstage3 {
-    width: 40%;
-    height: 35vw;
-    background-image: url(../materials/backstage/backstage3.jpg);
-}
-
-#backstage4 {
-    width: 100%;
-    height: 50vw;
-    background-image: url(../materials/backstage/backstage4.jpg);
-}
-
-#backstage5 {
-    width: 60%;
-    height: 35vw;
-    background-image: url(../materials/backstage/backstage5.jpg);
-}
-
-#backstage6 {
+#ferrari2 {
     width: 30%;
     height: 35vw;
-    background-image: url(../materials/backstage/backstage6.jpg);
+    background-image: url(../materials/ferrari/ferrari_8.png);
+    background-size: contain;
 }
 
-#backstage7 {
+#ferrari3 {
+    width: 50%;
+    height: 35vw;
+    background-image: url(../materials/ferrari/ferrari_2.png);
+}
+
+#ferrari4 {
     width: 40%;
     height: 35vw;
-    background-image: url(../materials/backstage/backstage7.jpg);
+    background-image: url(../materials/ferrari/ferrari_4.png);
 }
 
-#backstage8 {
-    width: 45%;
+#ferrari5 {
+    width: 40%;
     height: 35vw;
-    background-image: url(../materials/backstage/backstage8.jpg);
+    background-image: url(../materials/ferrari/ferrari_5.jpg);
+}
+
+#ferrari6 {
+    width: 50%;
+    height: 35vw;
+    background-image: url(../materials/ferrari/ferrari_3.png);
+}
+
+#ferrari7 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/ferrari/ferrari_7.png);
+}
+
+#ferrari8 {
+    width: 45%;
+    height: 50vw;
+    background-image: url(../materials/ferrari/ferrari_6.png);
     background-position: right;
 }
 
 @media only screen and (max-width: 768px) {
-    #backstageCover {
+    #ferrariCover {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage1 {
+    #ferrari1 {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage2 {
+    #ferrari2 {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage3 {
+    #ferrari3 {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage4 {
+    #ferrari4 {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage5 {
+    #ferrari5 {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage6 {
+    #ferrari6 {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage7 {
+    #ferrari7 {
         width: 100%;
         height: 50vw;
     }
 
-    #backstage8 {
+    #ferrari8 {
         width: 100%;
         height: 50vw;
     }
@@ -647,73 +603,141 @@ iframe {
 
 /* I Grrr ----------------------------------------------------------------------------------------------------------------------------- */
 
-#grrrCover {
-    width: 30%;
-    height: 30vw;
-    background-image: url(../materials/grrr/copertina.jpg);
+#futuraCover {
+    background-image: url(../materials/futura/world.jpg);
 }
 
-#grrr1 {
-    width: 50%;
-    height: 30vw;
-    background-image: url(../materials/grrr/grrr1.jpg);
+#futura1 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/futura/hub_2.jpg);
 }
 
-#grrr2 {
-    width: 30%;
-    height: 31vw;
-    background-image: url(../materials/grrr/grrr2.jpg);
+#futura2 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/futura/hub_3.jpg);
     background-position: 65% 0;
 }
 
-#grrr3 {
-    width: 30%;
-    height: 31vw;
-    background-image: url(../materials/grrr/grrr3.jpg);
+#futura3 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/futura/hub_1.jpg);
     background-position: 60% 0;
 }
 
-#grrr4 {
+#futura4 {
     width: 30%;
-    height: 31vw;
-    background-image: url(../materials/grrr/grrr4.jpg);
+    height: 35vw;
+    background-image: url(../materials/futura/roblox_1.jpg);
 }
 
-#grrr5 {
-    width: 100%;
-    height: 45vw;
-    background-image: url(../materials/grrr/grrr5.jpg);
+#futura5 {
+    width: 60%;
+    height: 35vw;
+    background-image: url(../materials/futura/roblox_2.jpg);
+}
+
+#futura6 {
+    width: 30%;
+    height: 35vw;
+    background-image: url(../materials/futura/EnergyStore.png);
+}
+
+#futura7 {
+    width: 40%;
+    height: 40vw;
+    background-image: url(../materials/futura/buddy1.png);
+    background-size: contain;
+}
+
+#futura8 {
+    width: 40%;
+    height: 40vw;
+    background-image: url(../materials/futura/buddy2.png);
+    background-size: contain;
+}
+
+#futura9 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/futura/buddy3.png);
+    background-size: contain;
+}
+
+#futura10 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/futura/buddy4.png);
+    background-size: contain;
+}
+
+#futura11 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/futura/buddy5.png);
+    background-size: contain;
 }
 
 @media only screen and (max-width: 768px) {
-    #grrrCover {
+    #futuraCover {
         width: 100%;
         height: 50vw;
     }
 
-    #grrr1 {
+    #futura1 {
         width: 100%;
         height: 50vw;
     }
 
-    #grrr2 {
-        width: 100%;
-        height: 50vw;
-        background-position: 50% 50%;
-    }
-
-    #grrr3 {
-        width: 100%;
-        height: 50vw;
-        background-position: 50% 50%;
-    }
-
-    #grrr4 {
+    #futura2 {
         width: 100%;
         height: 50vw;
     }
 
-    #grrr5 {
+    #futura3 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #futura4 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #futura5 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #futura6 {
+        width: 100%;
+        height: 50vw;
+        background-size: contain;
+    }
+
+    #futura7 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #futura8 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #futura9 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #futura10 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #futura11 {
         width: 100%;
         height: 50vw;
     }
@@ -721,81 +745,57 @@ iframe {
 
 /* Keith Haring ----------------------------------------------------------------------------------------------------------------------------- */
 
-#haringCover {
-    width: 100%;
-    height: 48vw;
-    background-image: url(../materials/haring/copertina.jpg);
+#sisalCover {
+    background-image: url(../materials/sisal/sisal1.jpg);
 }
 
-#haring1 {
-    width: 25%;
-    height: 30vw;
-    background-image: url(../materials/haring/haring1.jpg);
-}
-
-#haring2 {
-    width: 25%;
-    height: 30vw;
-    background-image: url(../materials/haring/haring2.jpg);
-
-}
-
-#haring3 {
-    width: 30%;
-    height: 30vw;
-    background-image: url(../materials/haring/haring3.jpg);
-}
-
-#haring4 {
+#sisal1 {
     width: 40%;
-    height: 30vw;
-    background-image: url(../materials/haring/haring4.jpg);
+    height: 35vw;
+    background-image: url(../materials/sisal/sisal4.jpg);
 }
 
-#haring5 {
-    width: 45%;
-    height: 30vw;
-    background-image: url(../materials/haring/haring5.jpg);
+#sisal2 {
+    width: 40%;
+    height: 35vw;
+    background-image: url(../materials/sisal/sisal5.jpg);
+
 }
 
-#haring6 {
-    width: 45%;
+#sisal3 {
+    width: 60%;
     height: 30vw;
-    background-image: url(../materials/haring/haring6.jpg);
+    background-image: url(../materials/sisal/sisal2.jpg);
+}
+
+#sisal4 {
+    width: 40%;
+    height: 45vw;
+    background-image: url(../materials/sisal/sisal3.jpeg);
 }
 
 @media only screen and (max-width: 768px) {
-    #haringCover {
+    #sisalCover {
         width: 100%;
         height: 50vw;
     }
 
-    #haring1 {
+    #sisal1 {
         width: 100%;
         height: 50vw;
     }
 
-    #haring2 {
+    #sisal2 {
         width: 100%;
         height: 50vw;
     }
 
-    #haring3 {
+    #sisal3 {
         width: 100%;
         height: 50vw;
     }
 
-    #haring4 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #haring5 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #haring6 {
+    #sisal4 {
         width: 100%;
         height: 50vw;
     }
@@ -807,6 +807,11 @@ iframe {
     width: 100%;
     height: 40vw;
     background-image: url(../materials/mkwii/mkwii12.jpg);
+}
+
+.mkwiiVideo2 {
+    width: 40%;
+    height: 33vw;
 }
 
 #mkwii0 {
@@ -822,10 +827,18 @@ iframe {
 }
 
 #mkwii2 {
-    width: 40%;
-    height: 30vw;
+    width: 80%;
+    height: 35vw;
     background-image: url(../materials/mkwii/mkwii2.jpg);
 
+}
+
+
+
+
+.mkwiiVideo3 {
+    width: 40%;
+    height: 33vw;
 }
 
 #mkwii3 {
@@ -846,6 +859,15 @@ iframe {
     background-image: url(../materials/mkwii/mkwii5.jpg);
 }
 
+
+
+
+
+.mkwiiVideo4 {
+    width: 40%;
+    height: 33vw;
+}
+
 #mkwii6 {
     width: 100%;
     height: 40vw;
@@ -864,22 +886,14 @@ iframe {
     background-image: url(../materials/mkwii/mkwii8.jpg);
 }
 
-#mkwii9 {
-    width: 100%;
-    height: 40vw;
-    background-image: url(../materials/mkwii/mkwii9.jpg);
-}
 
-#mkwii10 {
-    width: 40%;
-    height: 30vw;
-    background-image: url(../materials/mkwii/mkwii10.jpg);
-}
 
-#mkwii11 {
+
+
+
+.mkwiiVideo1 {
     width: 40%;
-    height: 30vw;
-    background-image: url(../materials/mkwii/mkwii11.jpg);
+    height: 33vw;
 }
 
 #mkwii13 {
@@ -921,6 +935,26 @@ iframe {
 
 @media only screen and (max-width: 768px) {
     #mkwiiCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .mkwiiVideo1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .mkwiiVideo2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .mkwiiVideo3 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .mkwiiVideo4 {
         width: 100%;
         height: 50vw;
     }
@@ -970,21 +1004,6 @@ iframe {
         height: 50vw;
     }
 
-    #mkwii9 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #mkwii10 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #mkwii11 {
-        width: 100%;
-        height: 50vw;
-    }
-
 
     #mkwii12 {
         width: 100%;
@@ -1024,142 +1043,128 @@ iframe {
 
 /* Off The Grid ----------------------------------------------------------------------------------------------------------------------------- */
 
-#offthegridCover {
-    width: 40%;
-    height: 30vw;
-    background-image: url(../materials/offthegrid/copertina.jpg);
+#dolce_vitaCover {
+    background-image: url(../materials/dolce_vita/cover.jpg);
+    background-position: bottom;
 }
 
-#offthegrid1 {
+#dolce_vitaVideo {
     width: 50%;
+    height: 33vw;
+}
+
+#dolce_vita1 {
+    width: 56%;
     height: 30vw;
-    background-image: url(../materials/offthegrid/offthegrid1.jpg);
+    background-image: url(../materials/dolce_vita/fountain_2.jpg);
 }
 
-#offthegrid2 {
+#dolce_vita2 {
     width: 40%;
-    height: 28vw;
-    background-image: url(../materials/offthegrid/offthegrid2.jpg);
+    height: 30vw;
+    background-image: url(../materials/dolce_vita/fountain_1.jpg);
 
 }
 
-#offthegrid3 {
-    width: 45%;
-    height: 24vw;
-    background-image: url(../materials/offthegrid/offthegrid3.jpg);
+#dolce_vita3 {
+    width: 40%;
+    height: 30vw;
+    background-image: url(../materials/dolce_vita/triumph_1.png);
+    background-size: contain;
 }
 
-#offthegrid4 {
-    width: 45%;
-    height: 24vw;
-    background-image: url(../materials/offthegrid/offthegrid4.jpg);
+#dolce_vita4 {
+    width: 30%;
+    height: 30vw;
+    background-image: url(../materials/dolce_vita/triumph_2.png);
 }
 
-#offthegrid5 {
+#dolce_vita5 {
     width: 40%;
     height: 35vw;
-    background-image: url(../materials/offthegrid/offthegrid6.jpg);
+    background-image: url(../materials/dolce_vita/triumph_4.png);
 }
 
-@media only screen and (max-width: 768px) {
-    #offthegridCover {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #offthegrid1 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #offthegrid2 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #offthegrid3 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #offthegrid4 {
-        width: 100%;
-        height: 50vw;
-    }
-
-    #offthegrid5 {
-        width: 100%;
-        height: 50vw;
-    }
-}
-
-/* L'Abbandono della val seriana ----------------------------------------------------------------------------------------------------------------------------- */
-
-#reportageCover {
-    width: 60%;
-    height: 42vw;
-    background-image: url(../materials/reportage/copertina.jpg);
-}
-
-#reportage1 {
-    width: 30%;
-    height: 42vw;
-    background-image: url(../materials/reportage/reportage1.jpg);
-}
-
-#reportage2 {
-    width: 30%;
-    height: 42vw;
-    background-image: url(../materials/reportage/reportage2.jpg);
-
-}
-
-#reportage3 {
-    width: 60%;
-    height: 42vw;
-    background-image: url(../materials/reportage/reportage3.jpg);
-}
-
-#reportage4 {
-    width: 30%;
-    height: 42vw;
-    background-image: url(../materials/reportage/reportage4.jpg);
-}
-
-#reportage5 {
+#dolce_vita6 {
     width: 50%;
-    height: 42vw;
-    background-image: url(../materials/reportage/reportage5.jpg);
+    height: 35vw;
+    background-image: url(../materials/dolce_vita/triumph_7.png);
 }
 
+#dolce_vita7 {
+    width: 50%;
+    height: 35vw;
+    background-image: url(../materials/dolce_vita/triumph_5.png);
+}
+
+#dolce_vita8 {
+    width: 30%;
+    height: 35vw;
+    background-image: url(../materials/dolce_vita/triumph_6.png);
+    background-size: contain;
+}
+
+#dolce_vita9 {
+    width: 40%;
+    height: 50vw;
+    background-image: url(../materials/dolce_vita/triumph_3.png);
+    background-size: contain;
+}
+
+
 @media only screen and (max-width: 768px) {
-    #reportageCover {
+    #dolce_vitaCover {
         width: 100%;
-        height: 65vw;
+        height: 50vw;
     }
 
-    #reportage1 {
+    #dolce_vitaVideo {
         width: 100%;
-        height: 125vw;
+        height: 50vw;
     }
 
-    #reportage2 {
+    #dolce_vita1 {
         width: 100%;
-        height: 125vw;
+        height: 50vw;
     }
 
-    #reportage3 {
+    #dolce_vita2 {
         width: 100%;
-        height: 65vw;
+        height: 50vw;
     }
 
-    #reportage4 {
+    #dolce_vita3 {
         width: 100%;
-        height: 125vw;
+        height: 50vw;
     }
 
-    #reportage5 {
+    #dolce_vita4 {
         width: 100%;
-        height: 60vw;
+        height: 50vw;
+    }
+
+    #dolce_vita5 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #dolce_vita6 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #dolce_vita7 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #dolce_vita8 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #dolce_vita9 {
+        width: 100%;
+        height: 50vw;
     }
 }

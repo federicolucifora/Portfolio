@@ -21,6 +21,20 @@
     display: block;
 }
 
+#artWork {
+    width: 100%;
+    border-bottom: solid 2px #FFC5B3;
+    margin-top: 6vw;
+    margin: 0 .5vw 1.3vw .5vw;
+}
+
+#otherDesign {
+    width: 100%;
+    border-bottom: solid 2px #FFC5B3;
+    margin-top: 6vw;
+    margin: 3vw .5vw 1.3vw .5vw;
+}
+
 /* Works -------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .workContainer {
     padding: 0 1vw;
@@ -82,10 +96,6 @@
     background-image: url(../materials/meet/meet1.png);
 }
 
-#reportage {
-    background-image: url(../materials/reportage/copertina.jpg);
-}
-
 #aletheia {
     background-image: url(../materials/aletheia/copertina.jpg);
 }
@@ -94,24 +104,25 @@
     background-image: url(../materials/dirtypiggybank/copertina.png);
 }
 
-#backstage {
-    background-image: url(../materials/backstage/copertina.jpg);
+#ferrari {
+    background-image: url(../materials/ferrari/cover.jpg);
+    background-position: 30%
 }
 
-#grrr {
-    background-image: url(../materials/grrr/copertina.jpg);
+#futura {
+    background-image: url(../materials/futura/world.jpg);
 }
 
-#haring {
-    background-image: url(../materials/haring/copertina.jpg);
+#sisal {
+    background-image: url(../materials/sisal/sisal1.jpg);
 }
 
 #mkwii {
     background-image: url(../materials/mkwii/mkwii12.jpg);
 }
 
-#offthegrid {
-    background-image: url(../materials/offthegrid/copertina.jpg);
+#dolce_vita {
+    background-image: url(../materials/dolce_vita/cover.jpg);
 }
 
 .emptyObject {
