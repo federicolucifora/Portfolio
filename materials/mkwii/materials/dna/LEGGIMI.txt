@@ -1,0 +1,9 @@
+Metti qui le tue immagini con questi nomi esatti:
+- cover.jpg  (copertina, usata sia nella griglia portfolio che in cima alla pagina progetto)
+- dna1.jpg
+- dna2.jpg
+- dna3.jpg
+- dna4.jpg
+
+Puoi aggiungerne altre: basta copiare lo schema #dna5, #dna6... in styles/projects.css
+e aggiungere il div corrispondente in work/dna.html.

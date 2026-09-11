@@ -127,7 +127,8 @@
 
 /* Temporary placeholder - replace with background-image: url(../materials/dna/cover.jpg); once the image exists */
 #dna {
-    background-image: url(../materials/dna/cover.jpg);
+    background-color: #FFE3E3;
+    border: 0.2vw dashed #931F1F;
 }
 
 .emptyObject {
