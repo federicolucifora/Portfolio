@@ -396,63 +396,6 @@ iframe {
     }
 }
 
-/* Meet Museum ----------------------------------------------------------------------------------------------------------------------------- */
-
-#meetCover {
-    background-image: url(../materials/meet/meet1.png);
-}
-
-#meet1 {
-    width: 30%;
-    height: 35vw;
-    background-image: url(../materials/meet/meet1.png);
-}
-
-#meet2 {
-    width: 50%;
-    height: 35vw;
-    background-image: url(../materials/meet/meet2.png);
-}
-
-#meet3 {
-    width: 50%;
-    height: 35vw;
-    background-image: url(../materials/meet/meet3.png);
-}
-
-#meet4 {
-    width: 30%;
-    height: 35vw;
-    background-image: url(../materials/meet/meet4.png);
-}
-
-@media only screen and (max-width: 768px) {
-    #meetCover {
-        width: 100%;
-        height: 100vw;
-    }
-
-    #meet1 {
-        width: 100%;
-        height: 60vw;
-    }
-
-    #meet2 {
-        width: 100%;
-        height: 60vw;
-    }
-
-    #meet3 {
-        width: 100%;
-        height: 60vw;
-    }
-
-    #meet4 {
-        width: 100%;
-        height: 60vw;
-    }
-}
-
 /* Hell's Chicken ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 #dirtyVideo {
     width: 35%;
@@ -1201,9 +1144,66 @@ iframe {
 
     .dnaStoryBox {
         height: auto;
+        width: 100%;
     }
 
     .placeholderImage {
         font-size: 3vw;
+    }
+}
+
+/* Roma Nel Mondo - The DNA of Rome ------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+#romaCover {
+    background-image: url(../materials/roma_nel_mondo/cover.jpg);
+}
+
+.romaStoryBox {
+    width: 45%;
+    height: 30vw;
+    box-sizing: border-box;
+}
+
+#roma1 {
+    width: 45%;
+    height: 30vw;
+    background-image: url(../materials/roma_nel_mondo/roma1.jpg);
+}
+
+#roma2 {
+    width: 60%;
+    height: 40vw;
+    background-image: url(../materials/roma_nel_mondo/roma2.jpg);
+}
+
+#romaVideo {
+    width: 35%;
+    height: 40vw;
+}
+
+@media only screen and (max-width: 768px) {
+    #romaCover {
+        width: 100%;
+        height: 50vw;
+    }
+
+    .romaStoryBox {
+        width: 100%;
+        height: auto;
+    }
+
+    #roma1 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #roma2 {
+        width: 100%;
+        height: 50vw;
+    }
+
+    #romaVideo {
+        width: 100%;
+        height: 50vw;
     }
 }

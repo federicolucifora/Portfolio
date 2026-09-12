@@ -1,4 +1,0 @@
-Metti qui una sola immagine, con questo nome esatto:
-- cover.jpg  (copertina: usata sia nella griglia portfolio che in cima alla pagina progetto, prima del video)
-
-Il video (https://youtu.be/u8uj_H55qlc) e' gia' incorporato nella pagina, non serve nessun altro file.

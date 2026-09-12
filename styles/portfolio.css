@@ -92,14 +92,6 @@
     background-position: 0 70%;
 }
 
-#meet {
-    background-image: url(../materials/meet/meet1.png);
-}
-
-#aletheia {
-    background-image: url(../materials/aletheia/copertina.jpg);
-}
-
 #dirtypiggybank {
     background-image: url(../materials/dirtypiggybank/copertina.png);
 }
@@ -128,6 +120,10 @@
 /* Temporary placeholder - replace with background-image: url(../materials/dna/cover.jpg); once the image exists */
 #dna {
     background-image: url(../materials/dna/cover.jpg);
+}
+
+#roma_nel_mondo {
+    background-image: url(../materials/roma_nel_mondo/cover.jpg);
 }
 
 .emptyObject {
