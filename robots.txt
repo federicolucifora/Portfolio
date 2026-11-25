@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://federicolucifora.github.io/Portfolio/sitemap.xml
